@@ -1,0 +1,328 @@
+.yugabyte-book-slider-section {
+	padding-bottom: 80px; /*--existing css do not change --*/
+	overflow: hidden;
+}
+
+.yb-book-slider-items.owl-carousel:not(.owl-loaded) .yb-book-slider-item {
+	display: none;
+}
+
+.yb-book-slider-items.owl-carousel:not(.owl-loaded) .yb-book-slider-item:first-child {
+	display: flex;
+}
+
+.yugabyte-book-slider-section .section-head {
+	border-bottom: 1px solid var(--grayscale-gray-3);
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+}
+
+.yugabyte-book-slider-section h2 {
+	width: 970px;
+	max-width: 100%;
+}
+
+.yb-book-slider-items {
+	margin: 0 0 12px;
+}
+
+.yb-book-slider-item {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.yb-book-slide-left,
+.yb-book-slide-right {
+	width: 50%;
+}
+
+.yb-book-slide-left {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding-top: 70px;
+}
+
+.yb-sec .yb-book-slide-text {
+	font-family: Roobert;
+}
+
+.yb-book-slide-text {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.yb-sec .yb-book-slide-title {
+	font-family: Roobert;
+}
+
+.yb-book-slide-title {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 40px;
+	letter-spacing: -0.64px;
+	width: 540px;
+	max-width: 100%;
+}
+
+.yb-sec .yb-book-slide-point {
+	font-family: Roobert;
+}
+
+.yb-book-slide-point {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	margin: 10px 0;
+	padding-left: 24px;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-cross.svg);
+	background-repeat: no-repeat;
+	background-position: 0 6px;
+}
+
+.yb-book-slide-point.checked {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-check.svg);
+}
+
+.yb-sec .yb-book-slide-subs {
+	font-family: Roobert;
+}
+
+.yb-book-slide-subs {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+}
+
+.yb-book-slide-subs ul li {
+  position: relative;
+  background: none;
+}
+
+.yb-book-slide-subs ul li:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--grayscale-black);
+  border-radius: 50%;
+}
+
+.section-bg-dark .yb-book-slide-subs ul li:before {
+  background: var(--grayscale-gray-1);
+}
+.yb-book-slide-right img {
+  height: auto;
+  object-fit: contain;
+}
+
+.yb-book-slider-items.owl-carousel .owl-stage {
+	transition: transform 0s 150ms ease !important;
+}
+
+.yb-book-slider-items.owl-carousel .owl-item {
+	transition: opacity 150ms ease;
+}
+
+.yb-book-slider-items.owl-carousel .owl-item.active {
+	transition: opacity 150ms 150ms ease;
+}
+
+@media (min-width: 992px) {
+
+	.rebrand-hero-v3 ~ .yugabyte-book-slider-section .section-head {
+		padding-top: 120px;
+	}
+
+	.rebrand-hero-v3 ~ .yugabyte-book-slider-section .yb-book-slide-right {
+		padding-top: 80px;
+	}
+
+	.yb-book-slide-details {
+		width: 580px;
+		padding-right: 20px;
+		max-width: 100%;
+	}
+}
+
+.yb-book-slide-point + .yb-book-slide-subs {
+	margin: 40px 0 0;
+}
+
+/* owl nav */
+.yb-book-slider-items .owl-nav {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	justify-content: space-between;
+	width: 150px;
+}
+
+.yb-book-slider-items .owl-nav button {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/angle-left.svg) !important;
+	height: 48px;
+	width: 48px;
+	border-radius: 3px;
+	background-color: #f5f5f7 !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	transition: all 0.3s ease;
+	margin: 0 !important;
+}
+
+.section-bg-dark .yb-book-slider-items .owl-nav button {
+	background-color: var(--grayscale-gray-12) !important;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/angle-left-white.svg) !important;
+}
+
+.yb-book-slider-items .owl-nav button.owl-next {
+	transform: rotate(180deg);
+}
+
+.yb-book-slider-items .owl-dots {
+	position: absolute;
+	top: 520px;
+	left: 0;
+	display: flex;
+	gap: 4px;
+}
+
+.yb-book-slider-items .owl-dots button {
+	margin: 0 !important;
+	width: 40px;
+	height: 20px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.yb-book-slider-items .owl-dots span {
+	max-height: 2px;
+	background: var(--grayscale-gray-3);
+	transition: all 300ms ease;
+}
+
+.yb-book-slider-items .owl-dots .active span {
+	background: var(--primary-orange);
+}
+
+/* owl nav */
+@media (min-width: 992px) {
+
+	.yb-book-slider-items .owl-dots {
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-book-slider-section {
+		padding-bottom: 24px;
+	}
+
+	.yugabyte-book-slider-section .section-head {
+		padding-bottom: 32px;
+		margin-bottom: 48px;
+	}
+
+	.yugabyte-book-slider-section h2 {
+		width: 720px;
+	}
+
+	.yb-book-slider-item {
+		flex-flow: column-reverse;
+	}
+
+	.yb-book-slide-left,
+	.yb-book-slide-right {
+		width: 100%;
+	}
+
+	.yb-book-slider-items .owl-nav {
+		display: none;
+	}
+
+	.owl-carousel .owl-item .yb-book-slide-right img {
+		max-width: 508px;
+		height: 508px;
+	}
+
+	.yb-book-slide-title {
+		font-size: 28px;
+		line-height: 32px;
+		letter-spacing: -0.56px;
+		width: 600px;
+		margin: 0 0 24px;
+	}
+
+	.yb-book-slide-point {
+		font-size: 18px;
+		line-height: 22px;
+		margin: 0 0 16px;
+		background-position: 0 3px;
+	}
+
+	.yb-book-slide-subs {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+	.yb-book-slide-points {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-book-slide-right {
+		text-align: center;
+	}
+
+	.yugabyte-book-slider-section .section-head {
+		padding-bottom: 24px;
+		margin-bottom: 36px;
+	}
+
+	.yb-book-slider-items .owl-dots {
+		top: 365px;
+	}
+
+	.yb-book-slider-items .owl-dots {
+		justify-content: center;
+	}
+
+	.owl-carousel .owl-item .yb-book-slide-right img {
+		max-width: 100%;
+		width: 350px;
+		height: 350px;
+	}
+
+	.yb-book-slide-left {
+		padding-top: 40px;
+	}
+
+	.yb-book-slide-title {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.yb-book-slide-point {
+		font-size: 16px;
+	}
+
+	.yb-book-slide-subs {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+}

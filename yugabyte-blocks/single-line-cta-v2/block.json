@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/single-line-cta-v2",
+	"title": "Single Line CTA V2",
+	"category": "yugabytedb-blocks",
+	"description": "Add Single Line CTA Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "sl-cta-v2.php"
+	}
+}

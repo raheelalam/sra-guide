@@ -1,0 +1,235 @@
+.cta.text-center {
+	margin-bottom: 90px;
+}
+
+.vid-section .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.vid-items {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	margin: 30px 0 90px;
+}
+
+.vid-section:not(:has(.section-head)) .vid-items,
+.nav + .vid-items {
+	margin: 90px 0;
+}
+
+.vid-item {
+	display: flex;
+	flex-flow: column;
+	padding: 32px;
+	background: var(--grayscale-gray-1);
+	border-radius: 4px;
+	gap: 20px;
+	width: calc((100% / 3) - 14px);
+	max-width: calc(100% - 15px);
+	cursor: pointer;
+	position: relative;
+	transition: all 300ms ease;
+}
+
+.vid-item::before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	width: 48px;
+	height: 48px;
+	border-radius: 3px;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-play-white.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--primary-orange);
+	transition: all 300ms ease;
+	bottom: 32px;
+	left: 32px;
+}
+
+.vid-item:hover::before {
+	background-color: var(--primary-purple);
+}
+
+.vid-item::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.video-thumb {
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 100% auto;
+	width: 100%;
+	aspect-ratio: 1.9;
+	background-color: #000;
+}
+
+body:not(.js-lazyloaded-new) .video-thumb {
+	background-image: none !important;
+}
+
+.vid-title {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.vid-desc {
+	font-size: 16px;
+	line-height: normal;
+	color: var(--grayscale-gray-10);
+	margin: 0 0 72px;
+}
+
+
+.vid-item time {
+	color: var(--grayscale-gray-8);
+	margin: -10px 0 -25px !important;
+	font-size: 70%;
+}
+
+.sliding {
+	overflow: hidden;
+	margin-left: calc(50% - 50vw);
+	width: 100vw;
+	position: relative;
+}
+
+.vid-section:not(:has(.section-head)) .sliding {
+	margin-top: 72px;
+}
+
+.sliding .vid-items {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-left: calc(50% - (1330px / 2) + 15px);
+}
+
+.sliding .vid-items .vid-item {
+	white-space: normal;
+	display: inline-flex;
+	margin-right: 20px;
+	vertical-align: top;
+	min-height: 570px;
+	width: 416px;
+}
+
+.sliding .vid-title {
+	font-size: 22px;
+	line-height: 26px;
+	height: 78px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.sliding .vid-desc {
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.sliding .nav {
+	position: absolute;
+	top: 0;
+	right: calc(50% - (1330px / 2) + 83px);
+	width: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.sliding .nav button {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/angle-left.svg) !important;
+	border: none;
+	height: 40px;
+	width: 40px;
+	margin: 0 5px;
+	border-radius: 3px;
+	background-color: #f5f5f7 !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	transition: all 300ms ease;
+}
+
+.sliding .nav button.disabled {
+	opacity: 0.5;
+}
+
+.sliding .nav button:not(.disabled) {
+	cursor: pointer;
+}
+
+.sliding .nav button:not(.disabled):hover {
+	background-color: #e5e4eb !important;
+}
+
+.sliding .nav button.next {
+	transform: rotate(180deg);
+}
+
+@media (max-width: 1399px) {
+
+	.sliding .vid-items {
+		padding-left: 15px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.vid-item {
+		padding: 18px;
+	}
+
+	.vid-item::before {
+		bottom: 18px;
+		left: 18px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.vid-item {
+		width: calc((100% / 2) - 10px);
+	}
+}
+
+@media (max-width: 767px) {
+
+	.vid-item {
+		width: 400px;
+	}
+
+	.vid-items {
+		flex-flow: column;
+		align-items: center;
+	}
+}
+
+@media (pointer: coarse) {
+
+	.sliding .nav {
+		display: none;
+	}
+
+	.sliding .vid-items {
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		scroll-padding-left: 15px;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.sliding .vid-items .vid-item {
+		scroll-snap-align: start;
+	}
+}

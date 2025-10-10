@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/comparison",
+	"title": "Comparison",
+	"category": "yugabytedb-blocks",
+	"description": "Add Comparison Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "comparison.php"
+	}
+}

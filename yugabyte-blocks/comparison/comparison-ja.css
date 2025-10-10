@@ -1,0 +1,35 @@
+[lang="ja"] .yb-compare-title {
+	font-size: 20px;
+}
+
+[lang="ja"] .yb-compare-point {
+	font-size: 14px;
+}
+
+@media (min-width: 992px) {
+
+	[lang="ja"] .cta-full-single.cta-purple span {
+		width: 44%;
+		padding: 24px 20px;
+	}
+
+	[lang="ja"] .cta-full-single.cta-purple > div {
+		width: 56%;
+	}
+
+	[lang="ja"] .cta-full-single.cta-purple > div a {
+		padding: 14px 20px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	[lang="ja"] .yb-compare-title {
+		font-size: 16px;
+	}
+
+	[lang="ja"] .yb-compare-point {
+		font-size: 12px;
+	}
+}

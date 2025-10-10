@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/feature-icons",
+	"title": "Feature with icons",
+	"category": "yugabytedb-feature-blocks",
+	"description": "Add feature icons section.",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "feature-icons.php"
+	}
+}

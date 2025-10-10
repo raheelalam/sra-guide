@@ -1,0 +1,244 @@
+.yb-popup-card {
+	padding: 0 0 120px;
+}
+
+.yb-popup-card .section-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.yb-popup-card .section-head h2 {
+	margin: 0;
+	width: 824px;
+	max-width: 100%;
+}
+
+.yb-popup-card.section-bg-dark a:not(:hover)::after {
+	background-size: 0, 0, auto;
+}
+
+.yb-popup-card.section-bg-dark .section-head {
+	border-bottom-color: var(--grayscale-gray-11);
+}
+
+.yb-popup-card-items {
+	display: flex;
+	gap: 24px;
+}
+
+.yb-popup-card-item {
+	display: flex;
+	flex-flow: column;
+	padding: 32px;
+	background: var(--grayscale-gray-12);
+	border-radius: 4px;
+	gap: 20px;
+	width: 416px;
+	max-width: 100%;
+	cursor: pointer;
+	position: relative;
+	transition: all 300ms ease;
+}
+
+.section-bg-white .yb-popup-card-item {
+	background: #f5f5f7;
+}
+
+.section-bg-white .yb-popup-card-item:hover {
+	background: var(--grayscale-black);
+}
+
+.yb-popup-card-item::before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	width: 48px;
+	height: 48px;
+	border-radius: 3px;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-play-white.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--primary-orange);
+	transition: all 300ms ease;
+	bottom: 32px;
+	left: 32px;
+}
+
+.yb-popup-card-item:hover::before {
+	background-color: var(--primary-purple);
+}
+
+.section-bg-white .yb-popup-card-item::before {
+	background-color: var(--grayscale-gray-12);
+}
+
+.section-bg-white .yb-popup-card-item:hover::before {
+	background-color: var(--primary-orange);
+}
+
+.section-bg-white .yb-popup-card-item:hover span {
+	color: var(--grayscale-gray-1);
+}
+
+.yb-popup-card-item::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.yb-popup-card-item .yt-thumb {
+	overflow: hidden;
+	aspect-ratio: 1.77;
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+}
+
+.yb-popup-card-item img {
+	width: 100%;
+	height: auto;
+}
+
+.yb-popup-card-item span {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	gap: 24px;
+	margin-bottom: 144px;
+}
+
+.cta-area {
+	margin-top: 40px;
+	text-align: center;
+}
+
+@media (max-width: 991px) {
+
+	.yb-popup-card {
+		padding: 0 0 80px;
+		overflow: hidden;
+	}
+
+	.yb-popup-card .section-head {
+		padding: 64px 0 32px;
+		margin-bottom: 48px;
+	}
+
+	.yb-popup-card-items {
+		width: calc(100% + 40px);
+		overflow-x: scroll;
+		display: block;
+		white-space: nowrap;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		scroll-snap-type: x mandatory;
+	}
+
+	.yb-popup-card-items::-webkit-scrollbar {
+		display: none;
+	}
+
+	.yb-popup-card-item {
+		display: inline-flex;
+		vertical-align: top;
+		width: 316px;
+		margin-right: 20px;
+		white-space: normal;
+		padding: 27px 28px 36px;
+		scroll-snap-align: start;
+	}
+
+	.yb-popup-card-item::before {
+		bottom: 36px;
+		left: 28px;
+	}
+
+	.yb-popup-card-item:last-child {
+		margin-right: 40px;
+	}
+
+	.yb-popup-card-item span {
+		font-size: 22px;
+		line-height: 26px;
+		height: 158px;
+		display: -webkit-box;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		min-height: auto;
+		margin-bottom: 90px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-popup-card {
+		padding: 0 0 72px;
+	}
+
+	.yb-popup-card .container {
+		position: relative;
+	}
+
+	.yb-popup-card .section-head {
+		padding: 56px 0 24px;
+		margin-bottom: 36px;
+	}
+
+	.yb-popup-card h2 {
+		width: 300px;
+	}
+
+	.yb-popup-card h2 br {
+		display: none;
+	}
+
+	.yb-popup-card .section-head a {
+		position: absolute;
+		bottom: 0;
+		padding: 7px 7px 7px 16px;
+		background: #fff;
+		color: var(--grayscale-black);
+		height: 48px;
+	}
+
+	.yb-popup-card .section-head a::after {
+		background-image:
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-white.svg),
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-orange.svg),
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-black.svg);
+		background-size: 0, 0, auto;
+		width: 32px;
+		height: 32px;
+	}
+
+	.yb-popup-card .section-head a:hover::after {
+		background-size: 0, auto, 0;
+	}
+
+	.yb-popup-card-item {
+		width: 272px;
+		margin-right: 12px;
+		padding: 24px;
+	}
+
+	.yb-popup-card-item::before {
+		bottom: 24px;
+		left: 24px;
+	}
+
+	.yb-popup-card-item span {
+		font-size: 20px;
+		line-height: 24px;
+		height: 148px;
+	}
+}

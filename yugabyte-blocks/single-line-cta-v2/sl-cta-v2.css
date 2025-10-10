@@ -1,0 +1,108 @@
+.standalone-cta {
+	padding: 80px 0 0;
+}
+
+.standalone-cta .cta-stand-alone {
+	display: flex;
+	flex-flow: row;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.standalone-cta .cta-stand-alone .cta-text {
+	width: calc(100% - 250px);
+	color: #fff;
+	font-family: Roobert !important;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 28px;
+	padding: 34px 20px 34px 40px;
+}
+
+.standalone-cta .cta-stand-alone .cta-text p:only-child {
+	margin: 0;
+}
+
+.standalone-cta .cta-stand-alone .cta-text p,
+.standalone-cta .cta-stand-alone .cta-text a {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+.standalone-cta .cta-stand-alone .cta-text a {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	transition: all 250ms ease;
+}
+
+.standalone-cta .cta-stand-alone .cta-text a:hover {
+	text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.standalone-cta .cta-stand-alone .cta-text strong,
+.standalone-cta .cta-stand-alone .cta-text b {
+	color: inherit;
+	font-weight: 500;
+}
+
+.standalone-cta .cta-stand-alone .links {
+	width: 250px;
+	display: flex;
+	align-items: center;
+	background-color: var(--primary-orange);
+	transition: all 300ms ease;
+	justify-content: center;
+}
+
+@media (max-width: 1369px) {
+
+	.standalone-cta .container {
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.standalone-cta .cta-stand-alone .links {
+		border-left: 1px solid var(--grayscale-white-20);
+	}
+}
+
+@media (max-width: 991px) {
+
+	.standalone-cta {
+		padding: 64px 0 0;
+	}
+
+	.standalone-cta .container {
+		padding: 0 40px;
+	}
+
+	.standalone-cta .cta-stand-alone {
+		flex-flow: column;
+	}
+
+	.standalone-cta .cta-stand-alone .cta-text {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.standalone-cta .cta-stand-alone .links {
+		border-top: 1px solid var(--grayscale-white-20);
+		width: 100%;
+		justify-content: left;
+		padding: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.standalone-cta .container {
+		padding: 0 16px;
+	}
+}

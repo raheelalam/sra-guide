@@ -1,0 +1,265 @@
+.yugabyte-faq-section {
+	overflow: hidden;
+	padding: 0 0 120px;
+}
+
+.yugabyte-faq-section img {
+	width: auto;
+	height: auto;
+}
+
+.yugabyte-faq-section.section-bg-gray {
+	background-color: var(--grayscale-gray-1);
+}
+
+.yugabyte-faq-section .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.aside-faq-container {
+	display: flex;
+	flex-flow: row;
+	gap: 56px;
+}
+
+.yb-faq-items {
+	width: 64%;
+}
+
+.yb-faq-aside {
+	width: 35%;
+}
+
+.yb-faq-item {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+	position: relative;
+}
+
+.yb-sec .yb-faq-aside-title {
+	font-family: Roobert;
+}
+
+.yb-faq-aside-title {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 0 0 32px;
+}
+
+.yb-sec .yb-faq-q {
+	font-family: Roobert;
+	width: 650px;
+	max-width: 100%;
+}
+
+.yb-faq-q {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	padding: 0 30px 0 0;
+}
+
+.yb-faq-q::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 35px;
+	cursor: pointer;
+	top: 20px;
+	left: 0;
+}
+
+.yb-faq-a {
+	padding-top: 8px;
+	overflow: hidden;
+	transition: all 500ms ease;
+	max-height: 500px;
+}
+
+.yb-faq-a p {
+	width: 650px;
+	max-width: 100%;
+}
+
+.yb-faq-item:not(.open) .yb-faq-a {
+	padding-top: 0;
+	max-height: 0;
+}
+
+.yb-sec .yb-faq-a * {
+	font-family: inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.yb-sec:not(.section-bg-dark) .yb-faq-a *:not(a) {
+	color: var(--grayscale-gray-10);
+}
+
+.section-bg-gray .yb-faq-a p {
+	color: var(--grayscale-gray-11);
+}
+
+.faq-button {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0;
+	top: 20px;
+	transition: all 300ms ease;
+	cursor: pointer;
+	transform-origin: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.open .faq-button {
+	transform: rotate(180deg);
+}
+
+.faq-button::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-bottom: 2px solid #121017;
+	border-right: 2px solid #121017;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+
+.yb-sec.section-bg-dark .faq-button::before {
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+
+}
+
+
+@media (min-width: 992px) {
+
+	.yugabyte-faq-section.style-small-heading .section-head {
+		padding-top: 0;
+		padding-bottom: 40px;
+		margin-bottom: 34px;
+	}
+
+	.yugabyte-faq-section.style-small-heading .section-head h2 {
+		font-size: 40px;
+		font-weight: 500;
+		line-height: 32px;
+		letter-spacing: -1.2px;
+	}
+
+	.yb-sec.style-large-faq .yb-faq-aside {
+		padding-top: 20px;
+		padding-left: 20px;
+	}
+
+	.yb-sec.style-large-faq .yb-faq-q {
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 32px;
+		letter-spacing: -0.96px;
+	}
+
+	.yb-sec.style-large-faq .yb-faq-a *,
+	.yb-sec.style-large-faq .yb-faq-a {
+		font-family: Inter;
+		font-size: 24px;
+		font-weight: 400;
+		padding-top: 12px;
+		line-height: 30px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-faq-section {
+		padding: 0 0 64px;
+	}
+
+	.yugabyte-faq-section .section-head {
+		padding-top: 64px;
+	}
+
+	.aside-faq-container {
+		flex-flow: column;
+		gap: 48px;
+	}
+
+	.yb-faq-items,
+	.yb-faq-aside {
+		width: 100%;
+	}
+
+	.yb-faq-aside {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.yb-faq-aside-title {
+		width: 416px;
+		max-width: 100%;
+	}
+
+	.yb-faq-q {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.faq-button {
+		top: 18px;
+	}
+
+	.faq-button::before {
+		width: 14px;
+		height: 14px;
+		margin: 0 0 10px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-faq-section {
+		padding: 0 0 56px;
+	}
+
+	.yb-faq-item {
+		padding: 36px 0;
+	}
+
+	.faq-button {
+		top: 32px;
+	}
+
+	.faq-button::before {
+		width: 10px;
+		height: 10px;
+		margin: 0 0 7px;
+	}
+
+	.yb-sec .yb-faq-a * {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.yb-faq-aside {
+		flex-flow: column;
+	}
+
+	.yb-faq-aside-title {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0 0 20px;
+	}
+}

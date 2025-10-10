@@ -1,0 +1,12 @@
+[lang="ja"] .yb-get-ready-section-card-title {
+	font-size: 44px;
+	line-height: 48px;
+}
+
+@media (max-width: 767px) {
+
+	[lang="ja"] .yb-get-ready-section-card-title {
+		font-size: 34px;
+		line-height: 38px;
+	}
+}

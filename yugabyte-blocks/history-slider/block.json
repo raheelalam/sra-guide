@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/history-slider",
+	"title": "History Slider",
+	"category": "yugabytedb-blocks",
+	"description": "Add History Slider Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "history-slider.php"
+	}
+}

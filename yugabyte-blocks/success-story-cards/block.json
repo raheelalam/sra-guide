@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/success-story-cards",
+	"title": "Success Story Content Section",
+	"category": "yugabytedb-blocks",
+	"description": "Add Success Stories Content",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "success-story.php"
+	}
+}

@@ -1,0 +1,128 @@
+.yb-built-n-run {
+	padding: 80px 0 0;
+	overflow: hidden;
+}
+
+.yb-built-n-run .container {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.yb-built-n-run .section-head {
+	padding: 8px 0 112px;
+	width: 100%;
+}
+
+.yb-built-n-run .section-copy {
+	position: absolute;
+	width: 526px;
+	top: 112px;
+	max-width: 100%;
+	left: 20px;
+}
+
+.yb-built-n-run.section-bg-dark .cta-button-small {
+	background: #fff;
+	color: var(--grayscale-black);
+}
+
+.yb-built-n-run.section-bg-dark .cta-button-small::after {
+	background-size: 0, 0, auto;
+}
+
+.yb-built-n-run.section-bg-dark .cta-button-small:hover::after {
+	background-size: 0, auto, 0;
+}
+
+@media (max-width: 1349px) and (min-width: 1200px) {
+
+	/*- avoid getting on bg */
+	.yb-built-n-run .section-copy {
+		max-width: calc(40vw - 40px);
+	}
+}
+
+.yb-built-n-run .details {
+	margin: 24px 0 32px;
+}
+
+.yb-built-n-run .section-image {
+	font-size: 0;
+	line-height: normal;
+	width: 1004px;
+	max-width: 80%;
+}
+
+.yb-built-n-run img {
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+
+	.yb-built-n-run .section-image {
+		margin-right: calc(50% - 50vw);
+	}
+}
+
+@media (min-width: 1601px) {
+
+	.yb-built-n-run .section-image {
+		width: 980px;
+	}
+}
+
+@media (max-width: 1239px) {
+
+	.yb-built-n-run .details p {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.yb-built-n-run .section-copy {
+		position: static;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yb-built-n-run .container {
+		flex-flow: column;
+		gap: 52px;
+	}
+
+	.yb-built-n-run .section-image {
+		width: calc(100% + 40px);
+		max-width: calc(100% + 40px);
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-built-n-run {
+		padding: 72px 0 0;
+	}
+
+	.yb-built-n-run .container {
+		gap: 42px;
+	}
+
+	.yb-built-n-run .details {
+		margin: 16px 0 32px;
+	}
+
+	.yb-built-n-run .details p {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.yb-built-n-run .section-image {
+		width: calc(100% + 80px);
+		max-width: calc(100% + 80px);
+		margin-left: -40px;
+	}
+}

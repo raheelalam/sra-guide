@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/beyond-technology",
+	"title": "Beyond the Technology",
+	"category": "yugabytedb-blocks",
+	"description": "Add Beyond the Technology Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "beyond-technology.php"
+	}
+}

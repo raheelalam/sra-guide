@@ -1,0 +1,28 @@
+[lang="ja"] .yugabyte-in-action-section .cta-full-single span {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+@media (max-width: 1239px) {
+
+	[lang="ja"] .yugabyte-in-action-section .cta-full-single span {
+		font-size: 13px;
+		width: calc(100% - 250px);
+	}
+
+	[lang="ja"] .yugabyte-in-action-section .cta-full-single a {
+		width: 250px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	[lang="ja"] .yugabyte-in-action-section .cta-full-single span {
+		font-size: 12px;
+		width: 100%;
+	}
+
+	[lang="ja"] .yugabyte-in-action-section .cta-full-single a {
+		width: 100%;
+	}
+}

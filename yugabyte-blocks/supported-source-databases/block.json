@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/supported-source-databases",
+	"title": "Supported Source Databases",
+	"category": "yugabytedb-blocks",
+	"description": "Add Supported Source Databases Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "supported-source-databases.php"
+	}
+}

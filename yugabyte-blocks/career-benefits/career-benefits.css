@@ -1,0 +1,62 @@
+.career-benefits {
+	padding: 0 0 64px;
+}
+
+.career-benefits .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.career-benefits .points {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.career-benefits .point {
+	padding: 0 20px 0 52px;
+	background: url(/wp-content/themes/yugabyte/assets/images/rebrand/check-orange.svg) no-repeat left center / 32px 32px;
+	margin: 0 0 56px;
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	width: calc(100% / 3);
+	height: 100%;
+}
+
+@media (max-width: 991px) {
+
+	.career-benefits .section-head {
+		padding: 64px 0 32px;
+		margin-bottom: 48px;
+	}
+
+	.career-benefits .point {
+		padding: 3px 20px 3px 44px;
+		margin: 0 0 56px;
+		font-size: 22px;
+		line-height: 26px;
+		width: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.career-benefits {
+		padding: 0 0 36px;
+	}
+
+	.career-benefits .section-head {
+		padding: 56px 0 24px;
+		margin-bottom: 36px;
+	}
+
+	.career-benefits .point {
+		padding: 4px 20px 4px 44px;
+		margin: 0 0 36px;
+		font-size: 20px;
+		line-height: 24px;
+		width: 100%;
+	}
+}

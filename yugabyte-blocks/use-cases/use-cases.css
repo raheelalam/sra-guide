@@ -1,0 +1,190 @@
+.yugabyte-usecase-cards-section {
+	padding-bottom: 124px;
+}
+
+.yugabyte-usecase-cards-section .section-head {
+	padding-bottom: 24px;
+}
+
+.yb-usecase-cards {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 24px;
+}
+
+.yb-usecase-card {
+	text-decoration: none;
+	max-width: calc((100% / 3) - (48px / 3));
+	background: #fff;
+	display: flex;
+	flex-flow: column;
+	padding: 24px 32px 32px;
+	border-radius: 4px;
+	transition: all 300ms ease;
+}
+
+.yb-usecase-card:hover {
+	background: var(--grayscale-black);
+}
+
+.yb-usecase-card-count {
+	font-family: Roobert;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	color: var(--primary-orange);
+	margin: 0 0 12px;
+}
+
+.yb-usecase-card-title {
+	font-family: Roobert;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 0 0 24px;
+	transition: all 300ms ease;
+}
+
+.yb-usecase-card:hover .yb-usecase-card-title {
+	color: #fff;
+}
+
+.yb-usecase-card-image {
+	overflow: hidden;
+	border-radius: 4px;
+	line-height: 0;
+	margin: 0 0 16px;
+	min-height: 177px;
+}
+
+.yb-usecase-card-image img {
+	width: auto;
+	height: auto;
+}
+
+.yb-usecase-card-details {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--grayscale-gray-10);
+	display: flex;
+	align-items: flex-end;
+}
+
+.yb-usecase-card-details span {
+	color: inherit;
+}
+
+.yb-usecase-card:hover .yb-usecase-card-details {
+	color: var(--grayscale-gray-1);
+}
+
+@media (min-width: 1240px) {
+
+	.yb-usecase-card-details span {
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		transition: all 300ms ease;
+	}
+}
+
+@media (max-width: 1100px) AND (min-width: 992px) {
+
+	.yb-usecase-card {
+		padding: 24px 15px 32px;
+	}
+
+	.yb-usecase-card-title {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-usecase-cards-section {
+		padding-bottom: 80px;
+	}
+
+	.yugabyte-usecase-cards-section .section-head {
+		padding-top: 64px;
+	}
+
+	.yb-usecase-cards {
+		flex-flow: column;
+		gap: 20px;
+	}
+
+	.yb-usecase-card {
+		max-width: 100%;
+		flex-flow: wrap;
+		align-items: flex-end;
+		padding: 28px;
+	}
+
+	.yb-usecase-card-count {
+		width: 36px;
+		font-size: 22px;
+		line-height: 26px;
+		margin: 0 0 20px;
+	}
+
+	.yb-usecase-card-title {
+		width: calc(100% - 40px);
+		font-size: 22px;
+		line-height: 26px;
+		margin: 0 0 20px;
+	}
+
+	.yb-usecase-card-image {
+		width: 352px;
+		margin: 0 24px 0 0;
+	}
+
+	.yb-usecase-card-details {
+		width: calc(100% - 380px);
+		height: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-usecase-cards-section {
+		padding-bottom: 72px;
+	}
+
+	.yb-usecase-card {
+		width: 480px;
+		margin: 0 auto;
+		padding: 24px;
+	}
+
+	.yb-usecase-card-count {
+		width: 100%;
+		margin: 0 0 12px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.yb-usecase-card-title {
+		width: 100%;
+		margin: 0 0 16px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.yb-usecase-card-image {
+		width: 100%;
+		margin: 0 0 24px;
+	}
+
+	.yb-usecase-card-details {
+		width: 100%;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

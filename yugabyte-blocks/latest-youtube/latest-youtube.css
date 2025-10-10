@@ -1,0 +1,219 @@
+.yb-latest-youtube {
+	padding: 0 0 120px;
+}
+
+.yb-latest-youtube .section-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.yb-latest-youtube .section-head h2 {
+	margin: 0;
+}
+
+.yb-latest-youtube.section-bg-dark a:not(:hover)::after {
+	background-size: 0, 0, auto;
+}
+
+.yb-latest-youtube.section-bg-dark .section-head {
+	border-bottom-color: var(--grayscale-gray-11);
+}
+
+.yb-latest-youtube-items {
+	display: flex;
+	gap: 24px;
+}
+
+.yb-latest-youtube-item {
+	display: flex;
+	flex-flow: column;
+	padding: 32px;
+	background: var(--grayscale-gray-12);
+	border-radius: 4px;
+	gap: 20px;
+	width: 416px;
+	max-width: 100%;
+	cursor: pointer;
+	position: relative;
+	transition: all 300ms ease;
+}
+
+.yb-latest-youtube-item::before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	width: 48px;
+	height: 48px;
+	border-radius: 3px;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-play-white.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--primary-orange);
+	transition: all 300ms ease;
+	bottom: 32px;
+	left: 32px;
+}
+
+.yb-latest-youtube-item:hover::before {
+	background-color: var(--primary-purple);
+}
+
+.yb-latest-youtube-item::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.yb-latest-youtube-item .yt-thumb {
+	overflow: hidden;
+	aspect-ratio: 1.77;
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+}
+
+.yb-latest-youtube-item img {
+	width: 100%;
+	height: auto;
+}
+
+.yb-latest-youtube-item span {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	gap: 24px;
+	margin-bottom: 144px;
+}
+
+
+@media (max-width: 991px) {
+
+	.yb-latest-youtube {
+		padding: 0 0 80px;
+		overflow: hidden;
+	}
+
+	.yb-latest-youtube .section-head {
+		padding: 64px 0 32px;
+		margin-bottom: 48px;
+	}
+
+	.yb-latest-youtube-items {
+		width: calc(100% + 40px);
+		overflow-x: scroll;
+		display: block;
+		white-space: nowrap;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		scroll-snap-type: x mandatory;
+	}
+
+	.yb-latest-youtube-items::-webkit-scrollbar {
+		display: none;
+	}
+
+	.yb-latest-youtube-item {
+		display: inline-flex;
+		vertical-align: top;
+		width: 316px;
+		margin-right: 20px;
+		white-space: normal;
+		padding: 27px 28px 36px;
+		scroll-snap-align: start;
+	}
+
+	.yb-latest-youtube-item::before {
+		bottom: 36px;
+		left: 28px;
+	}
+
+	.yb-latest-youtube-item:last-child {
+		margin-right: 40px;
+	}
+
+	.yb-latest-youtube-item span {
+		font-size: 22px;
+		line-height: 26px;
+		height: 158px;
+		display: -webkit-box;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		min-height: auto;
+		margin-bottom: 90px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-latest-youtube {
+		padding: 0 0 72px;
+	}
+
+	.yb-latest-youtube .container {
+		position: relative;
+		padding-bottom: 84px;
+	}
+
+	.yb-latest-youtube .section-head {
+		padding: 56px 0 24px;
+		margin-bottom: 36px;
+	}
+
+	.yb-latest-youtube h2 {
+		width: 300px;
+	}
+
+	.yb-latest-youtube h2 br {
+		display: none;
+	}
+
+	.yb-latest-youtube .section-head a {
+		position: absolute;
+		bottom: 0;
+		padding: 7px 7px 7px 16px;
+		background: #fff;
+		color: var(--grayscale-black);
+		height: 48px;
+	}
+
+	.yb-latest-youtube .section-head a::after {
+		background-image:
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-white.svg),
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-orange.svg),
+			url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-black.svg);
+		background-size: 0, 0, auto;
+		width: 32px;
+		height: 32px;
+	}
+
+	.yb-latest-youtube .section-head a:hover::after {
+		background-size: 0, auto, 0;
+	}
+
+	.yb-latest-youtube-item {
+		width: 272px;
+		margin-right: 12px;
+		padding: 24px;
+	}
+
+	.yb-latest-youtube-item::before {
+		bottom: 24px;
+		left: 24px;
+	}
+
+	.yb-latest-youtube-item span {
+		font-size: 20px;
+		line-height: 24px;
+		height: 148px;
+	}
+}

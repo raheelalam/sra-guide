@@ -1,0 +1,409 @@
+.life-at-yugabyte {
+	padding-bottom: 135px;
+}
+
+.life-at-yugabyte .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+	border-bottom: 1px solid var(--grayscale-gray-11);
+}
+
+.life-at-yugabyte.section-bg-dark .cta-button-small,
+.life-at-yugabyte.section-bg-dark .yb--link-white.cta-button-small,
+.life-at-yugabyte.section-bg-dark .yb--link-black.cta-button-small {
+	background: #fff;
+	color: var(--grayscale-black);
+}
+
+.life-at-yugabyte.section-bg-dark .orange-icon-large:active::after,
+.life-at-yugabyte.section-bg-dark .orange-icon-large:not(:hover)::after,
+.life-at-yugabyte.section-bg-dark .yb--link-black.cta-button-small:active::after,
+.life-at-yugabyte.section-bg-dark .yb--link-black.cta-button-small:not(:hover)::after {
+	background-size: 0, 0, auto;
+}
+
+.life-at-yugabyte .short-detail {
+	margin-bottom: 27px;
+}
+
+.life-at-yugabyte .section-copy {
+	display: flex;
+}
+
+.life-at-yugabyte .section-copy .content-area {
+	width: 100%;
+	max-width: 432px;
+}
+
+.isotops-images {
+	width: 100%;
+	max-width: calc(100% - 362px);
+	margin-left: -60px;
+	display: flex;
+	flex-flow: wrap;
+	gap: 20px;
+	justify-content: flex-start;
+	padding-top: 8px;
+}
+
+.isotops-image img {
+
+	/*object-fit: cover;*/
+
+	/*width: 100%;*/
+
+	/* height: 100%; */
+	object-fit: scale-down;
+	width: 100%;
+	height: 100%;
+	object-position: top;
+}
+
+.isotops-image:nth-child(1) {
+	order: 1;
+	width: 40.4%;
+	max-width: 370px;
+	height: 270px;
+	margin-left: auto;
+}
+
+.isotops-image:nth-child(2) {
+	order: 3;
+	width: 36.42%;
+	max-width: 334px;
+	height: 226px;
+	margin-top: -247px;
+
+	/*margin-left: -265px;*/
+	margin-left: -28.9%;
+
+}
+
+.isotops-image:nth-child(3) {
+	order: 4;
+	width: 18.74%;
+	max-width: 172px;
+	height: 226px;
+	margin-top: -247px;
+}
+
+.isotops-image:nth-child(4) {
+	order: 2;
+	width: 35.65%;
+	max-width: 327px;
+	height: 445px;
+	margin-top: 72px;
+
+	/* margin-right: 44px;*/
+	margin-right: 4.8%;
+}
+
+.isotops-image:nth-child(5) {
+	order: 2;
+	margin-top: 0;
+	position: relative;
+
+	/*left: 87px;*/
+	left: 9.5%;
+	width: 26.8%;
+	max-width: 246px;
+	height: 339px;
+}
+
+.isotops-image:nth-child(6) {
+	order: 5;
+	margin-left: auto;
+	margin-top: -360px;
+	width: 61.44%;
+	max-width: 564px;
+	height: 360px;
+}
+
+.isotops-image {
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+
+	.isotops-image:nth-child(2) {
+		margin-left: -29.5%;
+	}
+}
+
+@media (max-width: 1239px) {
+
+	.isotops-image:nth-child(1) {
+		height: 243px;
+	}
+
+	.isotops-image:nth-child(2) {
+		height: 203px;
+		margin-top: -226px;
+	}
+
+	.isotops-image:nth-child(3) {
+		height: 203px;
+		margin-top: -226px;
+	}
+
+	.isotops-image:nth-child(4) {
+		margin-right: 4.8%;
+		height: 401px;
+	}
+
+	.isotops-image:nth-child(5) {
+		left: 9.5%;
+		height: 299px;
+	}
+
+	.isotops-image:nth-child(6) {
+		height: 260px;
+		margin-top: -319px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.isotops-images {
+		gap: 15px;
+	}
+
+	.life-at-yugabyte .short-detail * {
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	.isotops-image:nth-child(1) {
+		height: 170px;
+	}
+
+	.isotops-image:nth-child(2) {
+		height: 142px;
+		margin-top: -158px;
+		margin-left: -29.8%;
+	}
+
+	.isotops-image:nth-child(3) {
+		height: 142px;
+		margin-top: -158px;
+	}
+
+	.isotops-image:nth-child(4) {
+		height: 281px;
+		margin-top: 45px;
+	}
+
+	.isotops-image:nth-child(5) {
+		left: 9.5%;
+		height: 209px;
+		margin-top: 0;
+	}
+
+	.isotops-image:nth-child(6) {
+		height: 182px;
+		margin-top: -224px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.life-at-yugabyte {
+		padding-bottom: 80px;
+	}
+
+	.life-at-yugabyte .section-head {
+		padding-bottom: 32px;
+		margin-bottom: 48px;
+	}
+
+	.life-at-yugabyte .section-copy {
+		flex-flow: column;
+	}
+
+	.isotops-images {
+		padding-top: 62px;
+		max-width: 668px;
+		margin-left: auto;
+	}
+
+	.isotops-images {
+		gap: 20px;
+	}
+
+	.isotops-image:nth-child(1) {
+		height: 200px;
+		width: 274px;
+	}
+
+	.isotops-image:nth-child(2) {
+		height: 168px;
+		width: 248px;
+		margin-left: -33.7%;
+		margin-top: -189px;
+	}
+
+	.isotops-image:nth-child(3) {
+		height: 168px;
+		width: 128px;
+		margin-top: -189px;
+	}
+
+	.isotops-image:nth-child(4) {
+		height: 330px;
+		width: 243px;
+		margin-top: 59px;
+	}
+
+	.isotops-image:nth-child(5) {
+		height: 246px;
+		width: 182px;
+		left: 6.5%;
+	}
+
+	.isotops-image:nth-child(6) {
+		height: 214px;
+		width: 422px;
+		margin-top: -266px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.life-at-yugabyte {
+		padding-bottom: 72px;
+	}
+
+	.life-at-yugabyte .section-head {
+		padding: 72px 0 24px;
+		margin-bottom: 36px;
+	}
+
+	.life-at-yugabyte .short-detail * {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.isotops-images {
+		max-width: 500px;
+		padding-top: 40px;
+	}
+
+	.isotops-image img {
+		height: 100%;
+	}
+
+	.isotops-image[data-order="1"] {
+		height: 218px;
+		width: 300px;
+	}
+
+	.isotops-image[data-order="2"] {
+		order: 2;
+		margin: 0;
+		width: 335px;
+		max-width: 385px;
+		height: 190px;
+	}
+
+	.isotops-image[data-order="3"] {
+		order: 3;
+		margin: 0;
+		width: 145px;
+		height: 190px;
+	}
+
+	.isotops-image[data-order="6"] {
+		order: 6;
+		margin: 0;
+		width: 268px;
+		height: 364px;
+	}
+
+	.isotops-image[data-order="5"] {
+		order: 5;
+		margin: 0;
+		left: 0;
+		width: 212px;
+		height: 286px;
+	}
+
+	.isotops-image[data-order="4"] {
+		order: 4;
+		margin: 0;
+		width: 100%;
+		height: 256px;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 539px) {
+
+	/*.isotops-images {
+		max-width: 343px;
+		gap:16px;
+	}
+	.isotops-image[data-order="1"] {
+		height: 174px;
+		width: 239px;
+	}
+	.isotops-image[data-order="2"] {
+		width: 216px;
+		height: 146px;
+	}
+	.isotops-image[data-order="3"] {
+		width: 111px;
+		height: 146px;
+	}
+	.isotops-image[data-order="6"] {
+		width: 185px;
+		height: 253px;
+	}
+	.isotops-image[data-order="5"] {
+		width: 142px;
+		height: 191px;
+	}
+	.isotops-image[data-order="4"] {
+		width: 100%;
+		height: 184px;
+		max-width: 100%;
+	}
+	*/
+	.isotops-images {
+		max-width: 100%;
+		gap: 16px;
+		gap: 4%;
+		row-gap: 16px;
+	}
+
+	.isotops-image[data-order="1"] {
+		height: 174px;
+		width: 69.7%;
+	}
+
+	.isotops-image[data-order="2"] {
+		height: 146px;
+		width: 62.97%;
+	}
+
+	.isotops-image[data-order="3"] {
+		width: 32.37%;
+		height: 146px;
+	}
+
+	.isotops-image[data-order="6"] {
+		height: 253px;
+		width: 54%;
+	}
+
+	.isotops-image[data-order="5"] {
+		height: 191px;
+		width: 41.2%;
+	}
+
+	.isotops-image[data-order="4"] {
+		width: 100%;
+		height: 184px;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/video-youtube-demo",
+	"title": "YouTube Demo",
+	"category": "yugabytedb-video-blocks",
+	"description": "Add YouTube Demo Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "youtube-demo.php"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/enhanced-compatibility",
+	"title": "Enhanced Compatibility",
+	"category": "yugabytedb-blocks",
+	"description": "Add Enhanced Compatibility Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "enhanced-compatibility.php"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/book-slider-v2",
+	"title": "Book Slider with changing Headings",
+	"category": "yugabytedb-blocks",
+	"description": "Add Book Slider Section V2",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "book-slider-v2.php"
+	}
+}

@@ -1,0 +1,325 @@
+.job-openings {
+	padding-bottom: 80px;
+	overflow: hidden;
+}
+
+.job-openings .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.jobs_filter_wrap {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 20px !important;
+}
+
+.jobs_filter_wrap .open-jobs {
+	margin-left: auto;
+}
+
+.job-openings .filter {
+	position: relative;
+	border-radius: 4px;
+	background: #f5f5f7;
+}
+
+.job-openings .filter::after {
+	position: absolute;
+	content: "";
+	width: 6px;
+	height: 6px;
+	z-index: 0;
+	border-bottom: 1px solid var(--grayscale-black);
+	border-right: 1px solid var(--grayscale-black);
+	transform: rotate(45deg);
+	top: 24px;
+	right: 24px;
+}
+
+.jobs_filter_wrap select {
+	background: none;
+	border: none;
+	padding: 16px 40px 16px 20px;
+	font-family: inter;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+
+	/*width: 196px;*/
+	min-height: 56px;
+	appearance: none;
+	margin-bottom: 0 !important;
+	position: relative;
+	z-index: 1;
+}
+
+#lever_jobs_cont li.no-result-found {
+	padding: 50px 0 30px;
+}
+
+#lever_jobs_cont,
+#lever_jobs_cont li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+#lever_jobs_cont .lever-job-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+#lever_jobs_cont a:hover {
+	background: #f5f5f7;
+}
+
+#lever_jobs_cont h4 {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 0;
+	max-width: 65%;
+	display: block;
+	align-items: center;
+}
+
+#lever_jobs_cont a {
+	min-height: 72px;
+	align-items: center;
+	position: relative;
+	transition: none;
+}
+
+#lever_jobs_cont a:hover::before,
+#lever_jobs_cont a:hover::after {
+	content: "";
+	width: 30px;
+	position: absolute;
+	left: -30px;
+	height: 72px;
+	background: #f5f5f7;
+}
+
+#lever_jobs_cont a:hover::after {
+	left: inherit;
+	right: -30px;
+}
+
+#lever_jobs_cont a:hover h4 {
+	color: #ff5f3b;
+}
+
+#lever_jobs_cont a:hover h4::after {
+	content: "";
+	width: 16px;
+	height: 16px;
+	background: url(/wp-content/themes/yugabyte/assets/images/rebrand/external.svg) no-repeat center/100% auto !important;
+	transition: all 0.3s;
+	display: inline-block;
+	margin-left: 6px;
+}
+
+#lever_jobs_cont .filter-tags {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0.14px;
+	text-transform: uppercase;
+	display: flex;
+	gap: 20px;
+}
+
+.job-openings .open-jobs {
+	font-family: Roobert;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0.14px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	color: var(--grayscale-gray-10);
+}
+
+.job-openings span.lever-job-tag,
+.job-openings span.team {
+	padding-left: 7px;
+	position: relative;
+	font-family: Roobert;
+}
+
+.job-openings span.lever-job-tag::before,
+.job-openings span.team::before {
+	border-left: 2px solid #735af5;
+	content: "";
+	height: 12px;
+	left: 0;
+	position: absolute;
+	top: 4px;
+}
+
+.job-openings .cta-purple * {
+	color: #fff;
+}
+
+.job-openings .cta-purple {
+	margin-top: 42px;
+}
+
+.job-openings a#lever-clear-filters {
+	display: none !important;
+}
+
+.cta-full-single.cta-purple > div a {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-external-purple.svg);
+}
+
+@media (max-width: 1199px) {
+
+	#lever_jobs_cont h4 {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	#lever_jobs_cont .lever-job-title {
+		display: flex;
+		justify-content: center;
+		flex-flow: column;
+		align-items: flex-start;
+	}
+
+	#lever_jobs_cont h4 {
+		margin-bottom: 8px;
+		max-width: 100%;
+	}
+
+	#lever_jobs_cont a {
+		min-height: 74px;
+	}
+
+	#lever_jobs_cont li {
+		margin-bottom: 5px;
+	}
+
+	.jobs_filter_wrap .open-jobs {
+		margin-left: 8px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.job-openings .cta-full-single {
+		flex-flow: column;
+	}
+
+	.job-openings .cta-full-single span {
+		font-size: 18px;
+		line-height: 22px;
+		width: 100%;
+		padding: 24px 32px;
+		max-width: 385px;
+	}
+
+	.job-openings .cta-full-single > div {
+		width: 100%;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.job-openings .cta-full-single a {
+		width: 100%;
+		padding: 20px 32px;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		min-height: 72px;
+	}
+
+	#lever_jobs_cont .lever-job-title {
+		padding: 5px 0;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.job-openings {
+		padding-bottom: 56px;
+	}
+
+	#lever_jobs_cont h4 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	#lever_jobs_cont .filter-tags {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	#lever_jobs_cont li {
+		margin-bottom: 2px;
+	}
+
+	select.lever-jobs-filter-teams {
+		width: 190px;
+	}
+
+	.job-openings span.lever-job-tag::before,
+	.job-openings span.team::before {
+		height: 10px;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.jobs_filter_wrap {
+		flex-flow: column;
+	}
+
+	.jobs_filter_wrap .open-jobs {
+		display: none !important;
+	}
+
+	.job-openings .cta-full-single span {
+		font-size: 16px;
+		line-height: 22px;
+		padding: 16px 16px;
+		max-width: 300px;
+		padding-right: 0;
+	}
+
+	.job-openings .cta-full-single a {
+		padding: 12px 16px;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22px;
+		min-height: 72px;
+	}
+
+	.jobs_filter_wrap select {
+		width: 100%;
+	}
+
+	.job-openings .cta-full-single.cta-purple > div a {
+		background-position: center right 16px;
+	}
+
+	#lever_jobs_cont .filter-tags {
+		flex-wrap: wrap;
+		row-gap: 0;
+	}
+
+
+	#lever_jobs_cont a:hover::before,
+	#lever_jobs_cont a:hover::after {
+		height: 100%;
+	}
+}
+

@@ -1,0 +1,239 @@
+.yb-press-framework {
+	padding-bottom: 108px;
+	overflow: hidden;
+}
+
+.yb-press-framework .section-head {
+	padding-bottom: 40px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid var(--grayscale-gray-3);
+}
+
+.yb-press-framework.section-bg-dark .section-head {
+	border-bottom-color: var(--grayscale-gray-11);
+}
+
+.yb-press-framework h2 {
+	width: 660px;
+	max-width: 100%;
+}
+
+.yb-press-framework .copy-details {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+	width: 660px;
+	max-width: 100%;
+	margin: 0 0 56px;
+}
+
+.yb-framework-items {
+	display: flex;
+	gap: 16px;
+	flex-flow: row;
+}
+
+.yb-framework-item {
+	position: relative;
+	padding: 32px;
+	border: 1px solid var(--grayscale-gray-10);
+	border-radius: 4px;
+	overflow: hidden;
+	transition: all 500ms 300ms ease;
+	width: 100%;
+	min-width: 0;
+	max-height: 460px;
+}
+
+.yb-framework-item:hover {
+	min-width: 334px;
+	background: #fff;
+}
+
+.yb-framework-plus {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	border: 1px solid var(--grayscale-gray-10);
+	border-radius: 4px;
+	left: 24px;
+	bottom: 19px;
+	transition: all 500ms 300ms ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.yb-framework-plus::before {
+	content: "";
+	width: 19px;
+	display: block;
+	height: 2px;
+	background: #fff;
+}
+
+.yb-framework-plus::after {
+	content: "";
+	height: 19px;
+	width: 2px;
+	position: absolute;
+	background: #fff;
+	top: 14px;
+	left: 22px;
+}
+
+.yb-framework-item:hover .yb-framework-plus {
+	opacity: 0;
+}
+
+.yb-framework-eyebrow {
+	border-radius: 2.667px;
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	color: var(--grayscale-black);
+	font-family: Roobert;
+	font-size: 32px;
+	font-weight: 500;
+	letter-spacing: -0.64px;
+	margin: 0 0 12px;
+	transition: all 500ms 300ms ease;
+}
+
+.yb-framework-item:hover .yb-framework-eyebrow {
+	background: var(--grayscale-black);
+	color: #fff;
+}
+
+.yb-framework-title {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 0 0 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: var(--grayscale-black);
+}
+
+.yb-framework-item:not(:hover) .yb-framework-content {
+	opacity: 0;
+}
+
+.yb-sec .yb-framework-content {
+	font-family: inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--grayscale-black);
+	transition: all 500ms 300ms ease;
+}
+
+.yb-sec .yb-framework-content * {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+.yb-sec .yb-framework-content strong,
+.yb-sec .yb-framework-content b {
+	font-weight: 600;
+}
+
+.yb-sec .yb-framework-content strong:only-child {
+	margin: 32px 0 0;
+	display: block;
+}
+
+.yb-press-framework .cta.text-center {
+	margin: 60px 0 0;
+}
+
+@media (max-width: 991px) {
+
+	.yb-press-framework {
+		padding-bottom: 80px;
+	}
+
+	.yb-press-framework .section-head {
+		padding: 80px 0 32px;
+		margin-bottom: 40px;
+	}
+
+	.yb-press-framework .copy-details {
+		font-size: 22px;
+		line-height: 26px;
+		width: 100%;
+		margin: 0 0 48px;
+	}
+
+	.yb-framework-items {
+		flex-flow: column;
+	}
+
+	.yb-framework-item {
+		height: 128px;
+		padding-left: 128px;
+	}
+
+	.yb-framework-item:hover {
+		height: auto;
+	}
+
+	.yb-framework-eyebrow {
+		position: absolute;
+		top: 32px;
+		left: 32px;
+		font-size: 28px;
+	}
+
+	.yb-framework-plus {
+		bottom: inherit;
+		top: 40px;
+		left: calc(100% - 88px);
+	}
+
+	.yb-framework-title {
+		font-size: 22px;
+		line-height: 26px;
+		white-space: normal;
+	}
+
+	.yb-sec .yb-framework-content strong:only-child {
+		margin: 24px 0 0;
+	}
+
+	.yb-sec .yb-framework-content li {
+		margin: 0 0 12px;
+	}
+
+	.yb-framework-item:not(:hover) .yb-framework-content,
+	.yb-framework-item:not(:hover) .yb-framework-title {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-framework-item {
+		height: 108px;
+		padding: 22px 22px 22px 118px;
+	}
+
+	.yb-framework-eyebrow {
+		top: 22px;
+		left: 22px;
+	}
+
+	.yb-framework-plus {
+		top: 30px;
+		left: calc(100% - 78px);
+	}
+}

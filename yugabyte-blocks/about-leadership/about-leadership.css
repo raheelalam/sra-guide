@@ -1,0 +1,195 @@
+.yugabyte-about-leadership-section .section-head {
+	border-bottom: 1px solid var(--grayscale-gray-3);
+	padding-bottom: 40px;
+	margin-bottom: 56px;
+}
+
+.about-leadership-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 24px;
+}
+
+.about-leadership-wrap > div {
+	width: calc((100% / 3) - 16px);
+	display: flex;
+	flex-flow: column;
+}
+
+.yugabyte-about-leadership-section img {
+	height: auto;
+}
+
+.about-leadership-details {
+	font-family: Roobert;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.about-leadership-details span {
+	width: 380px;
+	max-width: 100%;
+	font-family: inherit;
+}
+
+.about-leadership-name {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 20px 0 0;
+}
+
+.about-leadership-desg {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 12px 0 84px;
+}
+
+.about-staff-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 24px;
+}
+
+
+.about-staff-title {
+	margin: 80px 0 0;
+	width: 100%;
+	font-family: Roobert;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 0.18px;
+	text-transform: uppercase;
+}
+
+.about-staff-card {
+	width: calc(25% - 18px);
+	margin: 0 0 88px;
+	display: flex;
+	flex-flow: column;
+}
+
+.about-staff-card img {
+	height: auto;
+	border-radius: 4px;
+}
+
+.about-staff-name {
+	font-family: Roobert;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 20px 0 10px;
+}
+
+.about-staff-desg {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-about-leadership-section .section-head {
+		padding-bottom: 32px;
+		margin-bottom: 48px;
+	}
+
+	.about-leadership-wrap {
+		gap: 20px;
+	}
+
+	.about-leadership-wrap > div {
+		width: calc(50% - 10px);
+	}
+
+	.about-leadership-details {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.about-leadership-details span {
+		width: 350px;
+	}
+
+	.about-leadership-name {
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	.about-leadership-desg {
+		margin: 12px 0 28px;
+	}
+
+	.about-staff-wrap {
+		gap: 20px;
+	}
+
+	.about-staff-card {
+		width: calc(33.3% - 13.5px);
+		margin: 0 0 5px;
+	}
+
+	.about-staff-title {
+		margin: 64px 0 0;
+		line-height: 24px;
+	}
+
+	.about-staff-name {
+		font-size: 22px;
+		line-height: 26px;
+		margin: 16px 0 8px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-about-leadership-section .section-head {
+		padding: 72px 0 24px;
+		margin-bottom: 36px;
+	}
+
+	.about-leadership-wrap {
+		gap: 16px;
+		padding: 0 0 56px;
+	}
+
+	.about-leadership-wrap > .about-leadership-details {
+		width: 100%;
+		font-size: 16px;
+		margin: 0 0 26px;
+	}
+
+	.about-leadership-name {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 16px 0 0;
+	}
+
+	.about-leadership-desg {
+		margin: 8px 0 0;
+	}
+
+	.about-staff-wrap {
+		gap: 16px;
+		padding: 0 0 56px;
+	}
+
+	.about-staff-title {
+		margin: 56px 0 12px;
+	}
+
+	.about-staff-card {
+		width: calc(50% - 8px);
+		margin: 0 0 16px;
+	}
+
+	.about-staff-name {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 16px 0 8px;
+	}
+}

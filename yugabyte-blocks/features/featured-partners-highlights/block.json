@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/partners-highlights",
+	"title": "Featured Partner Highlights" ,
+	"category": "yugabytedb-feature-blocks",
+	"description": "Add Featured Partner Highlights",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "partners-highlights.php"
+	}
+}

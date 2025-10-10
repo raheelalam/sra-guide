@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/hero-v7",
+	"title": "Animated Images (v7)",
+	"category": "yugabytedb-hero-blocks",
+	"description": "Add Hero Section with Animated Multiple logos",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "v7.php"
+	}
+}

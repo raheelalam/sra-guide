@@ -1,0 +1,94 @@
+.yb-apps-challenge {
+	padding: 76px 0;
+}
+
+.apps-challenge-box {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	border-radius: 8px;
+	background: #201e25;
+}
+
+.apps-challenge-box img {
+	object-fit: contain;
+}
+
+.apps-challenge-box .cta-button-small {
+	margin-top: 20px;
+}
+
+.apps-challenge-box > div:first-child {
+	width: 60%;
+	padding: 0 80px 0 50px;
+}
+
+.apps-challenge-box > div:last-child {
+	width: 40%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	padding: 85px 0;
+}
+
+@media (max-width: 1239px) {
+
+	.apps-challenge-box img {
+		max-width: 250px;
+	}
+
+	.apps-challenge-box > div:last-child {
+		gap: 20px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.apps-challenge-box > div:last-child {
+		border-left: 1px solid #282532;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.apps-challenge-box > div:first-child,
+	.apps-challenge-box > div:last-child {
+		padding: 20px;
+	}
+
+	.apps-challenge-box > div:last-child {
+		gap: 10px;
+	}
+
+	.yb-sec .apps-challenge-box h2 {
+		font-size: 42px;
+		line-height: 46px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-sec .apps-challenge-box h2 {
+		font-size: 34px;
+		line-height: 38px;
+	}
+
+	.yb-sec .apps-challenge-box h2 br {
+		display: none;
+	}
+
+	.apps-challenge-box {
+		flex-flow: column;
+	}
+
+	.apps-challenge-box > div:first-child,
+	.apps-challenge-box > div:last-child {
+		width: 100%;
+	}
+
+	.apps-challenge-box > div:last-child {
+		max-width: 300px;
+	}
+}

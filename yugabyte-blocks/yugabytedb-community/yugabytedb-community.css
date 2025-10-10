@@ -1,0 +1,137 @@
+.yugabyte-yugabytedb-community-section {
+	padding: 80px 0 120px;
+}
+
+.yugabyte-yugabytedb-community-section img {
+	width: auto;
+	height: auto;
+}
+
+.yb-connect-com-inner {
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.yb-connect-com-inner-top {
+	display: flex;
+	flex-flow: row;
+	border-bottom: 1px solid var(--grayscale-gray-10);
+}
+
+.yb-connect-com-inner-top > div {
+	width: 50%;
+}
+
+.yb-connect-com-inner-top .section-head {
+	padding: 72px;
+}
+
+.yb-connect-com-inner .section-copy {
+	position: relative;
+	line-height: 0;
+}
+
+.yb-connect-com-inner .section-copy img {
+	position: relative;
+	z-index: 1;
+}
+
+.yugabyte-yugabytedb-community-section .cta-black a {
+	font-size: 20px;
+	font-weight: 600;
+	font-family: Roobert !important;
+}
+
+.yugabyte-yugabytedb-community-section.come-in .cta-black a {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-white.svg);
+}
+
+@media (max-width: 1239px) {
+
+	.yugabyte-yugabytedb-community-section {
+		padding: 64px 0 80px;
+	}
+
+	.yugabyte-yugabytedb-community-section h2 {
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 500;
+	}
+
+	.yb-connect-com-inner-top .section-head {
+		padding: 40px;
+	}
+
+	.yugabyte-yugabytedb-community-section .cta-full-single a,
+	.yugabyte-yugabytedb-community-section .cta-full-single span {
+		padding: 40px 34px;
+		font-size: 18px;
+		line-height: 22px;
+		display: flex;
+		align-items: center;
+	}
+
+	.yugabyte-yugabytedb-community-section .cta-full-single span i {
+		width: 160px;
+		display: block;
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yb-connect-com-inner-top {
+		flex-flow: column;
+	}
+
+	.yb-connect-com-inner-top > div {
+		width: 100%;
+	}
+
+	.yb-connect-com-inner-top > .section-copy {
+		text-align: center;
+	}
+
+	.yb-connect-com-inner-top .section-head {
+		padding: 40px 40px 0;
+	}
+
+	.yb-connect-com-inner-top h2 {
+		width: 600px;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-yugabytedb-community-section {
+		padding: 56px 0 72px;
+	}
+
+	.yb-connect-com-inner-top .section-head {
+		padding: 24px 24px 0;
+	}
+
+	.yugabyte-yugabytedb-community-section h2 {
+		font-size: 44px;
+		line-height: 46px;
+		font-weight: 400;
+	}
+
+	.yugabyte-yugabytedb-community-section .cta-full-single span i {
+		width: 100%;
+	}
+
+	.yugabyte-yugabytedb-community-section .cta-full-single a,
+	.yugabyte-yugabytedb-community-section .cta-full-single span {
+		padding: 32px 24px;
+		font-size: 16px;
+	}
+
+	.yugabyte-yugabytedb-community-section .cta-full-single a {
+		border-left: 0;
+		border-top: 1px solid var(--grayscale-white-20);
+		background-position: center right 24px;
+	}
+}

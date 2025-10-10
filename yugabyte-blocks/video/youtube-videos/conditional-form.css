@@ -1,0 +1,321 @@
+.form-content-area {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	max-width: 1154px;
+	width: 100%;
+	margin: 90px auto;
+}
+
+.left-side-content {
+	width: 585px;
+}
+
+.left-side-content *,
+.left-side-content p,
+.left-side-content {
+	color: #121017;
+	font-family: Roobert !important;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+}
+
+.yb-sec p sub {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.right-form-area {
+	width: 472px;
+	border-radius: 8px;
+	background: #f5f5f7;
+	padding: 43px 52px;
+	display: flex;
+	flex-flow: column;
+}
+
+.right-form-area h2 {
+	color: #121017;
+	font-family: inter;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 65px;
+	letter-spacing: -0.8px;
+}
+
+.form-content-area .left-side-content li {
+	background: none !important;
+	list-style: disc;
+	padding-left: 0;
+}
+
+.form-content-area .left-side-content ul {
+	padding-left: 40px;
+	margin: 20px 0 40px;
+}
+
+.form-content-area .right-form-area .hs-fieldtype-select .input,
+.form-content-area .right-form-area input[type="text"],
+.form-content-area .right-form-area input[type="email"],
+.form-content-area .right-form-area input[type="tel"],
+.form-content-area .right-form-area textarea {
+	border: 1px solid #c2c0cc;
+	background: rgba(255, 255, 255, 0.58);
+	height: 50px;
+	color: #121017;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	margin-bottom: 20px;
+	padding: 13px 20px;
+}
+
+.form-content-area .right-form-area .hs-fieldtype-select .input {
+	padding: 0;
+}
+
+.form-content-area .right-form-area textarea {
+	height: 75px;
+}
+
+.form-content-area > div select {
+	border: 1px solid var(--grayscale-gray-4);
+	margin-bottom: 20px;
+	font-family: inter;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	min-height: 50px;
+	background: transparent;
+	padding: 0 16px 0 26px;
+	transition: all 250ms ease;
+}
+
+
+.form-content-area .right-form-area input[type="text"].invalid.error,
+.form-content-area .right-form-area input[type="email"].invalid.error,
+.form-content-area .right-form-area input[type="tel"].invalid.error,
+.form-content-area .right-form-area .hs-fieldtype-select .input.invalid.error,
+.form-content-area .right-form-area textarea.invalid.error,
+.form-content-area .right-form-area .hs-fieldtype-select .input.invalid-error {
+	border: 1px solid #bf2933;
+}
+
+.form-content-area .right-form-area input[type="text"]:focus,
+.form-content-area .right-form-area input[type="email"]:focus,
+.form-content-area .right-form-area input[type="tel"]:focus,
+.form-content-area .right-form-area textarea:focus,
+.form-content-area .right-form-area input[type="text"]:focus-visible,
+.form-content-area .right-form-area input[type="email"]:focus-visible,
+.form-content-area .right-form-area input[type="tel"]:focus-visible,
+.form-content-area .right-form-area textarea:focus-visible,
+.form-content-area .right-form-area .hs-fieldtype-select .input.focus-field {
+	border: 1px solid #735af5;
+	outline: none;
+}
+
+.form-content-area input::-webkit-input-placeholder,
+.form-content-area textarea::-webkit-input-placeholder {
+	color: #121017;
+	font-weight: 500;
+}
+
+.form-content-area input::placeholder,
+.form-content-area textarea::placeholder {
+	color: #121017;
+	font-weight: 500;
+}
+
+.form-content-area input::-moz-placeholder,
+.form-content-area textarea::-moz-placeholder {
+	color: #121017;
+	opacity: 1;
+	font-weight: 500;
+}
+
+.form-content-area  .right-form-area .hs-fieldtype-select .input {
+	position: relative;
+}
+
+.form-content-area  .right-form-area .hs-fieldtype-select .input select {
+	border: none;
+	outline: none;
+	background: none;
+	color: #121017;
+	font-family: inter;
+	font-size: 16px;
+	font-weight: 500;
+	appearance: none;
+}
+
+.form-content-area .right-form-area .hs-fieldtype-select .input::after {
+	content: "";
+	width: 7px;
+	height: 7px;
+	position: absolute;
+	border: 2px solid #121017;
+	transform: rotate(45deg);
+	border-top: 0;
+	border-left: 0;
+	right: 21px;
+	top: 18px;
+}
+
+.form-content-area .right-form-area li {
+	list-style: none;
+	background: none;
+	padding-left: 0;
+}
+
+.form-content-area .hs-form-booleancheckbox label > span {
+	margin-left: 10px;
+}
+
+.form-content-area .legal-consent-container .hs-form-booleancheckbox-display p,
+.form-content-area .hs-form-booleancheckbox span {
+	margin: 0;
+	display: inline;
+	color: #121017;
+	font-family: inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.form-content-area .legal-consent-container .hs-form-booleancheckbox-display > span {
+	display: block;
+	margin-left: 10px;
+}
+
+.form-content-area .legal-consent-container .hs-form-booleancheckbox-display {
+	display: flex;
+	align-items: center;
+}
+
+.form-content-area .legal-consent-container .hs-form-booleancheckbox-display input {
+	display: flex;
+	float: none;
+	margin-bottom: 0;
+}
+
+.footer-note {
+	color: #121017;
+	font-family: inter;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+	padding-right: 40px;
+	margin-top: auto;
+}
+
+.form-content-area .right-form-area input.hs-button.primary.large.yb--link-black.cta-button-small {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-white.svg), url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-orange.svg), url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-black.svg);
+	background-size: auto, 0, 0;
+	background-repeat: no-repeat;
+	background-position: calc(100% - 12px) center;
+	padding-right: 58px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.form-content-area .right-form-area input.hs-button.primary.large.yb--link-black.cta-button-small:hover {
+	background-size: 0, auto, 0;
+}
+
+.form-content-area .right-form-area label.hs-error-msg.hs-main-font-element,
+.form-content-area .right-form-area .hs-error-msgs label {
+	margin: 0 0 10px;
+	margin-top: -20px;
+	display: block;
+	color: #bf2933;
+	font-family: inter;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.form-content-area .right-form-area .hs-error-msgs label {
+	margin-top: 0;
+}
+
+.form-content-area .hs-button {
+	appearance: none;
+	min-height: 56px;
+}
+
+.left-side-content img {
+	max-width: 50%;
+}
+
+.yb-sec .submitted-message * {
+	font-size: 22px;
+	line-height: 26px;
+}
+
+.left-side-content strong {
+	font-weight: 600;
+}
+
+.left-side-content h2,
+.left-side-content h2 * {
+	font-weight: 600;
+	font-size: 28px;
+}
+
+.left-side-content h3,
+.left-side-content h3 * {
+	font-weight: 600;
+	font-size: 24px;
+}
+
+@media (max-width: 991px) {
+
+	.form-content-area {
+		width: 100%;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		flex-flow: column;
+	}
+
+	.left-side-content {
+		width: 100%;
+	}
+
+	.right-form-area {
+		margin: 10px auto 0;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.left-side-content *,
+	.left-side-content p,
+	.left-side-content {
+		font-weight: 400;
+		line-height: 26px;
+		font-size: 18px;
+	}
+
+	.yb-sec p sub {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.right-form-area h2 {
+		font-size: 32px;
+		line-height: 43px;
+	}
+
+	.right-form-area {
+		padding: 28px;
+	}
+
+	.form-content-area .hs-button {
+		min-height: 48px;
+	}
+
+}

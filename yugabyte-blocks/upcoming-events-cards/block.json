@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/upcoming-events-cards",
+	"title": "Upcoming Events Content Section",
+	"category": "yugabytedb-blocks",
+	"description": "Add Upcoming Events Content",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "upcoming-events.php"
+	}
+}

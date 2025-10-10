@@ -1,0 +1,136 @@
+.yugabyte-download-version-section {
+	padding: 55px 0;
+	border-top: 1px solid var(--grayscale-gray-11);
+}
+.yugabyte-download-version-section:has(.multi-anchor) {
+  padding-top:0;
+  border-color:transparent;
+}
+.yugabyte-download-version-section img {
+	width: auto;
+	height: auto;
+}
+
+.yugabyte-download-version-section h2 > span:not(.primary-orange) {
+	font-size: 36px;
+	font-size: 50%;
+	font-style: normal;
+	display: block;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: -0.72px;
+}
+
+.partners-page .yb-hero-section ~ .yugabyte-download-version-section .primary-orange {
+	font-size: 110px;
+	line-height: 0;
+	position: relative;
+	top: 9px;
+}
+
+.yugabyte-download-version-section .eyebrow-text {
+	font-family: Roobert;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0.14px;
+	text-transform: uppercase;
+}
+
+.partners-page .yb-hero-section ~ .yugabyte-download-version-section .eyebrow-text {
+	color: #fff;
+	font-family: Roobert;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: 0.18px;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+}
+
+.yugabyte-download-version-section .multi-anchor {
+  display :flex;
+  list-style :none;
+  gap: 15px 36px;
+  padding-left: 0;
+  flex-flow: wrap;
+  margin-top :48px;
+}
+.yugabyte-download-version-section .multi-anchor li {
+  padding-left :0;
+  
+}
+.yugabyte-download-version-section .multi-anchor li > a{
+  background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/link-icon-white.svg),
+                    url(/wp-content/themes/yugabyte/assets/images/rebrand/link-icon-orange.svg);
+  background-size: auto,0;
+  background-position: center right ;
+  background-repeat: no-repeat;
+  padding-right :32px;
+  color: #FFF;
+  font-family: Roobert;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.yugabyte-download-version-section .multi-anchor li > a:hover{
+  background-size: 0,auto;
+}
+
+
+.yugabyte-download-version-section .full-anchor {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-orange.svg);
+	background-repeat: no-repeat;
+	background-position: right top calc(50% + 10px);
+	background-size: 52px;
+	display: block;
+	padding: 0 40px 0 0;
+}
+.yugabyte-download-version-section .section-head {
+  padding :30px 0 40px;
+  border-bottom: 1px solid var(--grayscale-gray-11);
+}
+
+@media (max-width: 1239px) {
+
+	.yugabyte-download-version-section .primary-orange {
+		font-size: 90px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-download-version-section {
+		padding: 48px 0;
+	}
+
+	.yugabyte-download-version-section a {
+		background-size: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-download-version-section .eyebrow-text {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.yugabyte-download-version-section {
+		padding: 56px 0 48px;
+	}
+
+	.yugabyte-download-version-section a {
+		padding: 0 0 42px;
+		background-position: bottom left;
+	}
+
+	@media (max-width: 1239px) {
+
+		.yugabyte-download-version-section .primary-orange {
+			font-size: 70px;
+		}
+	}
+}

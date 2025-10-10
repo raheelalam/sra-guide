@@ -1,0 +1,17 @@
+[lang="ja"] .yb-benefit-inner h3 {
+	font-size: 40px;
+}
+
+@media (max-width: 1239px) {
+
+	[lang="ja"] .yb-benefit-inner h3 {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	[lang="ja"] .yb-benefit-inner h3 {
+		font-size: 30px;
+	}
+}

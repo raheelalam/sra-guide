@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/latest-events",
+	"title": "Latest Events",
+	"category": "yugabytedb-blocks",
+	"description": "Add Latest Events Section",
+	"version": "2.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "latest-events.php"
+	}
+}

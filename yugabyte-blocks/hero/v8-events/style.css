@@ -1,0 +1,89 @@
+.yb-hero-section {
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.yb-hero-section .container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.pre-section {
+	width: 100%;
+	padding: 80px 0 0;
+	border-bottom: 1px solid var(--grayscale-gray-11);
+	margin: 0 0 56px;
+}
+
+.yb-hero-section h1,
+.yb-hero-section .h1 {
+	font-family: Roobert;
+	font-size: 72px;
+	line-height: 72px;
+	letter-spacing: -1.44px;
+	font-weight: 400;
+	margin: 0 0 40px;
+}
+
+@media (min-width: 1331px) {
+
+	.hero-content {
+		margin: 50px 0 18px;
+	}
+}
+
+@media (max-width: 1330px) {
+
+	.pre-section {
+		padding: 80px 0 0;
+	}
+
+}
+
+@media (max-width: 1199px) {
+
+	.pre-section {
+		padding: 80px 0 22px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.yb-hero-section h1,
+	.yb-hero-section .h1 {
+		font-size: 56px;
+		line-height: 62px;
+		letter-spacing: -1.12px;
+		margin: 0 0 20px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.yb-hero-section {
+		margin-top: 70px;
+	}
+
+	.yb-hero-section .container {
+		padding: 0;
+		flex-flow: column;
+	}
+
+	.pre-section {
+		padding: 40px 0 14px;
+		margin: 0 20px;
+		max-width: calc(100% - 40px);
+	}
+
+	.yb-hero-section h1,
+	.yb-hero-section .h1 {
+		font-size: 44px;
+		line-height: 46px;
+		letter-spacing: -0.88px;
+	}
+
+}
+

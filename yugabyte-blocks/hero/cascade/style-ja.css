@@ -1,0 +1,88 @@
+[lang="ja"] .yugabyte-hero-section h1 {
+	font-size: 90px;
+}
+
+[lang="ja"] .yugabyte-postgresql-section h2 {
+	font-size: 60px;
+}
+
+@media (max-width: 1099px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 60px;
+	}
+
+	[lang="ja"] .yugabyte-postgresql-section h2 {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+	[lang="ja"] .yugabyte-hero-section .cta a {
+		font-size: 16px;
+		padding: 15px 20px;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 62px;
+	}
+
+	[lang="ja"] .yugabyte-postgresql-section h2 {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 599px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 48px;
+	}
+}
+
+@media (max-height: 600px) and (max-width: 767px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 600px) {
+
+	[lang="ja"] .yugabyte-hero-section h1 {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 385px) {
+
+	[lang="ja"] .other-devices .yugabyte-hero-section h1 {
+		font-size: 40px;
+	}
+
+	[lang="ja"] .yugabyte-hero-section .cta a {
+		font-size: 10px;
+	}
+
+	[lang="ja"] .other-devices #section1 .sec-left .postgresql-col h2 {
+		font-size: 34px;
+		line-height: 38px;
+	}
+}
+
+@media (max-width: 350px) {
+
+	[lang="ja"] .other-devices .yugabyte-hero-section h1 {
+		font-size: 32px;
+	}
+}

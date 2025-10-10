@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/hero-v1",
+	"title": "Content Aside Picture (v1)",
+	"category": "yugabytedb-hero-blocks",
+	"description": "Add Hero Section with content Aside Picture",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "v1.php"
+	}
+}

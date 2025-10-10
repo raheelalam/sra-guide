@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/feature-numbered-v2",
+	"title": "Feature Numbered V2",
+	"category": "yugabytedb-feature-blocks",
+	"description": "Add Feature Numbered V2 Section",
+	"version": "1.1.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "feature-numbered-v2.php"
+	}
+}

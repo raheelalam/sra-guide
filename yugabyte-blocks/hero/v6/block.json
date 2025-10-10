@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/hero-v6",
+	"title": "Centered Content around Image (v6)",
+	"description": "Add Hero Section with centered content around Images",
+	"category": "yugabytedb-hero-blocks",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "v6.php"
+	}
+}

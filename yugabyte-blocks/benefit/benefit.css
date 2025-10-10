@@ -1,0 +1,464 @@
+.yugabyte-benefit-section {
+	padding: 120px 0 80px;
+	position: relative;
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	overflow: hidden;
+}
+
+.companies-logo ~ .yugabyte-benefit-section {
+	padding: 40px 0 80px;
+}
+
+.yugabyte-benefit-section img {
+	width: auto;
+	height: auto;
+}
+
+.yugabyte-benefit-section .container {
+	position: relative;
+}
+
+a.ctuu {
+	font-size: 0;
+}
+
+.yb-benefit-inner {
+	display: flex;
+	background: var(--grayscale-gray-1);
+	padding: 40px;
+	border-radius: 8px;
+	margin: 0 -40px;
+	gap: 80px;
+	justify-content: space-between;
+}
+
+.yb-benefit-tabs {
+	width: 560px;
+	max-width: 100%;
+}
+
+.yb-benefit-img {
+	width: 600px;
+	border-radius: 3px;
+	max-width: 100%;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.yb-benefit-img > div {
+	position: relative;
+	text-align: center;
+}
+
+.yb-benefit-img > div:not(:first-child) {
+	position: absolute;
+	inset: 0;
+}
+
+.yb-benefit-img > div.active {
+	z-index: 1;
+}
+
+.yb-benefit-img > div img,
+.yb-benefit-img > div svg {
+	transition: opacity 800ms linear;
+	opacity: 0;
+}
+
+.yb-benefit-img:not(:has(.active)) > div:not(:first-child) svg {
+	transition: opacity 800ms linear;
+	opacity: 0;
+}
+
+.yb-benefit-img > div.active img,
+.yb-benefit-img > div.active svg {
+	transition: opacity 800ms 200ms linear;
+	opacity: 1;
+}
+
+
+.yb-benefit-img:not(:has(.active)) > div:first-child svg {
+	transition: opacity 800ms 200ms linear;
+	opacity: 1;
+}
+
+.firefox .in-view-sec3.temp-active .yb-benefit-img .svg-loaded svg {
+	transition: opacity 100ms 0ms linear;
+	opacity: 1;
+}
+
+
+.yb-benefit-tabs > div {
+	border-bottom: 1px solid var(--grayscale-gray-4);
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.yb-benefit-tabs > div::before {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	height: 1px;
+	width: 0;
+	background: var(--primary-orange);
+	transition: all 1500ms ease;
+}
+
+.yb-benefit-tabs:not(.paused-running) > div.active::before {
+	animation: benefit-bar 6.8s linear forwards; /*-- a bit less then interval -*/
+}
+
+@keyframes benefit-bar {
+
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+.yb-benefit-inner .yb-benefit-tabs > div u::before {
+	width: 30px;
+	height: 30px;
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-black.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	content: "";
+	margin-right: 8px;
+	display: inline-block;
+	margin-bottom: -8px;
+	transition: transform 0.2s linear;
+}
+
+.yugabyte-benefit-section.come-out:not(.come-in) .yb-benefit-inner .yb-benefit-tabs > div u::before {
+	background-image: none;
+}
+
+.yb-benefit-inner .yb-benefit-tabs > div.active u::before {
+	transform: rotate(90deg);
+}
+
+.paused-running .yb-benefit-tabs > div.active::before {
+	animation: none;
+}
+
+.yb-benefit-tabs > div:hover::before {
+	width: 100%;
+}
+
+.yb-benefit-tabs > div .yb-benefit-copy {
+	overflow: hidden;
+	transition: all 1s linear;
+	max-height: 420px;
+}
+
+.yb-benefit-tabs:not(:has(.active)) > div:first-child .yb-benefit-copy {
+	max-height: 420px;
+	display: block;
+}
+
+.firefox .in-view-sec3.temp-active .yb-benefit-tabs > div:first-child .yb-benefit-copy {
+	transition: all 0.2s linear;
+	max-height: 420px;
+	display: block;
+}
+
+.yb-benefit-tabs > div:not(.active) .yb-benefit-copy {
+	max-height: 0;
+}
+
+.yb-benefit-inner u {
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	text-decoration: none;
+	padding-bottom: 16px;
+	display: block;
+}
+
+.yb-benefit-tabs > div:not(.active) u {
+	cursor: pointer;
+}
+
+.yb-benefit-inner h3 {
+	font-family: Roobert;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 56px;
+	letter-spacing: -0.96px;
+}
+
+.yb-benefit-inner p {
+	font-family: inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--grayscale-gray-10);
+}
+
+.yb-benefit-inner .yb-benefit-copy ul li {
+	font-family: inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--grayscale-gray-10);
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-check.svg);
+}
+
+.yb-benefit-inner .yb-benefit-copy ul li.cross {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-cross.svg);
+}
+
+.yugabyte-benefit-section.come-out:not(.come-in) .yb-benefit-inner .yb-benefit-copy ul li {
+	background-image: none;
+}
+
+@media (max-width: 1239px) {
+
+	.yb-benefit-inner {
+		margin: 0;
+		gap: 40px;
+		padding: 20px;
+	}
+
+	.yb-benefit-inner h3 {
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+}
+
+@media (max-width: 1199px) {
+
+	.yb-benefit-img > div {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1099px) and (min-width: 992px) {
+
+	.yb-benefit-tabs > div .yb-benefit-copy {
+		max-height: 620px;
+	}
+
+	.yb-benefit-tabs:not(:has(.active)) > div:first-child .yb-benefit-copy {
+		max-height: 620px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yb-benefit-img > div img,
+	.yb-benefit-img > div svg {
+		max-height: 550px;
+		height: auto;
+		width: auto;
+		padding: 20px;
+	}
+
+	.yugabyte-benefit-section {
+		padding: 80px 0 64px;
+	}
+
+	.yugabyte-benefit-section .container {
+		padding: 0 10px;
+	}
+
+	.yb-benefit-inner {
+		flex-flow: column-reverse;
+		width: 736px;
+		max-width: 100%;
+		margin: 0 auto;
+		gap: 32px;
+	}
+
+	.yb-benefit-img,
+	.yb-benefit-tabs {
+		width: 100%;
+	}
+
+	.yb-benefit-img > div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.yb-benefit-tabs-mob {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-benefit-section {
+		padding: 72px 0 56px;
+	}
+
+	.companies-logo ~ .yugabyte-benefit-section {
+		padding: 0 0 80px;
+	}
+
+	.yb-benefit-inner {
+		padding: 16px 16px 32px;
+	}
+
+	.yb-benefit-img > div img,
+	.yb-benefit-img > div svg {
+		max-height: 420px;
+	}
+
+	.yb-benefit-inner h3 {
+		font-size: 38px;
+		line-height: 40px;
+	}
+
+	.yb-benefit-inner p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.yb-benefit-tabs u {
+		display: none;
+	}
+
+	.yb-benefit-tabs-mob {
+		width: calc(100% + 32px);
+		margin-left: -16px;
+	}
+
+	.yb-benefit-tabs-mob > div {
+		overflow-y: auto;
+		white-space: nowrap;
+		padding-bottom: 24px;
+		padding-left: 16px;
+		scroll-behavior: smooth;
+	}
+
+	.yb-benefit-tabs-mob > div > div {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.yb-benefit-tabs-mob > div > div:last-child {
+		padding-right: 16px;
+	}
+
+	.yb-benefit-tabs-mob u {
+		font-weight: 600;
+		padding: 8px 16px;
+		border-radius: 24px;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	.yb-benefit-tabs-mob u span {
+		font-family: Roobert;
+	}
+
+	.yb-benefit-tabs-mob .active u span {
+		position: relative;
+		z-index: 1;
+		color: var(--grayscale-black);
+		background: linear-gradient(90deg, #fff 50%, #000 50%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 200%;
+		animation: benefit-mob-txt 5.6s 0.1s linear forwards;
+	}
+
+	.yb-benefit-tabs-mob .active u::before,
+	.yb-benefit-tabs-mob .active u::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--grayscale-gray-3);
+		border-radius: 24px;
+		z-index: -2;
+	}
+
+	.yb-benefit-tabs-mob > div:not(:has(.active)) > div:first-child u::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--grayscale-gray-3);
+		border-radius: 24px;
+		z-index: -1;
+	}
+
+	.yb-benefit-tabs > div .yb-benefit-copy,
+	.yb-benefit-tabs:not(:has(.active)) > div:first-child .yb-benefit-copy,
+	.firefox .in-view-sec3.temp-active .yb-benefit-tabs > div:first-child .yb-benefit-copy {
+		max-height: 600px;
+	}
+
+	.yb-benefit-tabs-mob .active u::after {
+		background: var(--primary-purple);
+		animation: benefit-mob-bar 5.9s linear forwards; /*-- a bit less then interval -*/
+	}
+
+	.paused-running .yb-benefit-tabs-mob .active u span,
+	.paused-running .yb-benefit-tabs-mob.paused-running .active u::after,
+	.paused-running .yb-benefit-tabs-mob .active u::after {
+		animation: none;
+	}
+
+	.paused-running .yb-benefit-tabs-mob .active u span {
+		color: #fff;
+		-webkit-background-clip: unset;
+		background: transparent;
+		-webkit-text-fill-color: inherit;
+	}
+
+	.yb-benefit-tabs > div {
+		border: none;
+		margin: 0;
+	}
+
+	.yb-benefit-tabs > div::before {
+		display: none;
+	}
+
+	.yb-benefit-tabs > div:not(.active) .yb-benefit-copy {
+		max-height: inherit;
+		display: none;
+	}
+}
+
+@keyframes benefit-mob-bar {
+
+	0% {
+		translate: calc(-100% + 16px);
+	}
+
+	100% {
+		translate: 0;
+	}
+}
+
+@keyframes benefit-mob-txt {
+
+	0% {
+		background-position: 100% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}

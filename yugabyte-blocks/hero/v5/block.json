@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/hero-v5",
+	"title": "Centered top image (v5)",
+	"category": "yugabytedb-hero-blocks",
+	"description": "Add Hero Section with centered top image with centered content",
+	"version": "2.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": false
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "v5.php"
+	}
+}

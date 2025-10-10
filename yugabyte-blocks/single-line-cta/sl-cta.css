@@ -1,0 +1,71 @@
+.yb-sl-cta-section {
+	padding: 60px 0;
+}
+
+.yb-sl-cta-section .cta-full-single span {
+	font-size: 20px;
+	line-height: 28px;
+	padding: 42px 32px;
+}
+
+.yb-sl-cta-section .cta-full-single a {
+	display: flex;
+	align-items: center;
+	background-position: center right 40px;
+	border-left-color: var(--grayscale-white-20);
+	padding: 42px 40px;
+	transition: all 300ms ease;
+	border-radius: 0 8px 8px 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.come-out:not(.come-in) .cta-orange {
+	background-color: #d72700;
+}
+
+.yb-sl-cta-section.come-in .cta-full-single a {
+	background-image: url(/wp-content/themes/yugabyte/assets/images/rebrand/button-arrow-white-orange.svg);
+	font-family: Roobert;
+}
+
+.yb-sl-cta-section .cta-full-single a:hover {
+	background-color: var(--primary-orange-hover);
+}
+
+@media (max-width: 1239px) {
+
+	.yb-sl-cta-section .cta-full-single a {
+		width: 192px;
+		background-position: center right 32px;
+		padding: 40px 32px 40px 40px;
+	}
+
+	.yb-sl-cta-section .cta-full-single span {
+		width: calc(100% - 192px);
+		font-size: 18px;
+		line-height: 22px;
+		padding: 24px 32px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yb-sl-cta-section .cta-full-single span {
+		width: 100%;
+		padding: 16px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.yb-sl-cta-section .cta-full-single a {
+		width: 100%;
+		padding: 23px 16px;
+		border-left: 0;
+		border-top: 1px solid var(--grayscale-white-20);
+		font-size: 16px;
+		line-height: 22px;
+		background-position: center right 32px;
+		border-radius: 0;
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/success-stories-v2",
+	"title": "Success Stories V2",
+	"category": "yugabytedb-blocks",
+	"description": "Add Success Stories with Horizontal Layout",
+	"version": "2.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "success-stories-v2.php"
+	}
+}

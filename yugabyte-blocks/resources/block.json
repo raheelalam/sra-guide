@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yugabytedb/resources",
+	"title": "Resources",
+	"category": "yugabytedb-blocks",
+	"description": "Add Resources Section",
+	"version": "1.0.0",
+	"textdomain": "yugabyte",
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"multiple": true
+	},
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "resources.php"
+	}
+}

@@ -1,0 +1,428 @@
+.yugabyte-beyond-tech-section {
+	padding: 120px 0 80px;
+}
+
+.yugabyte-beyond-tech-section img {
+	width: auto;
+	height: auto;
+}
+
+.yugabyte-beyond-tech-section h2 {
+	color: #151029;
+}
+
+.yugabyte-beyond-tech-section .section-inner {
+	display: flex;
+	flex-flow: row;
+	gap: 24px;
+}
+
+.yugabyte-beyond-tech-section .section-left {
+	width: 40%;
+	max-width: calc(100% - 680px);
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.yugabyte-beyond-tech-section .section-copy *:last-child {
+	margin-bottom: 0;
+}
+
+.yugabyte-beyond-tech-section .section-right {
+	width: 60%;
+	border-radius: 8px;
+	background: var(--grayscale-gray-1);
+	padding: 60px 30px 16px;
+}
+
+.yb-beyond-tech-slides {
+	position: relative;
+	width: 589px;
+	margin: 12px auto 55px;
+}
+
+.yb-beyond-tech-slides > div {
+	width: 282px;
+	height: 232px;
+	background: #fff;
+	position: relative;
+}
+
+.yb-beyond-tech-slides > div:nth-child(2) {
+	float: right;
+	margin-top: -54px;
+	z-index: 1;
+}
+
+.yb-beyond-tech-slides > div:nth-child(3) {
+	margin: 125px 0 0 0;
+}
+
+.yb-beyond-tech-title {
+	font-family: Roobert;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px;
+	margin: 0 0 12px;
+	padding-right: 10px;
+	transition: all 300ms ease;
+}
+
+.yb-beyond-tech-slides > div:hover .yb-beyond-tech-title,
+.yb-beyond-tech-slides:not(:hover) > div.active .yb-beyond-tech-title {
+	color: #fff;
+}
+
+.yb-beyond-tech-details {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	transition: all 300ms ease;
+	color: var(--grayscale-gray-1);
+	margin-bottom: 8px;
+	height: 96px;
+	opacity: 0;
+}
+
+.yb-beyond-tech-details span {
+	color: inherit;
+}
+
+.yb-beyond-tech-slides > div:hover .yb-beyond-tech-details,
+.yb-beyond-tech-slides:not(:hover) > div.active .yb-beyond-tech-details {
+	opacity: 1;
+}
+
+.yb-beyond-tech-cta {
+	padding: 8px 0;
+	font-family: Roobert;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.yb-beyond-tech-cta a {
+	width: 100%;
+	gap: 10px;
+}
+
+.yb-beyond-tech-slides > div:hover .yb-beyond-tech-cta a,
+.yb-beyond-tech-slides:not(:hover) > div.active .yb-beyond-tech-cta a {
+	color: #fff;
+}
+
+.yb-beyond-tech-slides > div:hover .yb-beyond-tech-cta a::after,
+.yb-beyond-tech-slides:not(:hover) > div.active .yb-beyond-tech-cta a::after {
+	background-size: 0, 0, auto;
+}
+
+.yb-beyond-tech-slides > div .yb-beyond-tech-cta a:hover::after {
+	background-size: 0, auto, 0;
+}
+
+.yb-beyond-tech-slides > div::before {
+	content: "";
+	position: absolute;
+	width: calc(100% + 24px);
+	height: calc(100% + 24px);
+	left: -12px;
+	top: -12px;
+	border-radius: 8px;
+	background: #fff;
+	border: 1px solid var(--grayscale-gray-5);
+}
+
+.yb-beyond-tech-slides > div > div {
+	position: relative;
+	z-index: 2;
+	padding: 16px 16px 6px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center left 20px;
+	transition: all 300ms ease;
+}
+
+.yb-beyond-tech-slides > div:hover > div,
+.yb-beyond-tech-slides:not(:hover) > div.active > div {
+	background-color: var(--grayscale-black);
+	background-image: none !important;
+	z-index: 2;
+}
+
+.yb-beyond-tech-slides > div:nth-child(1) > span::before,
+.yb-beyond-tech-slides > div:nth-child(1) > span::after,
+.yb-beyond-tech-slides > div:nth-child(2) > span::before,
+.yb-beyond-tech-slides > div:nth-child(2) > span::after,
+.yb-beyond-tech-slides > div:nth-child(3) > span::before,
+.yb-beyond-tech-slides > div:nth-child(3) > span::after,
+.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::before,
+.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::after {
+	content: "";
+	position: absolute;
+	background: #fff;
+	width: 40px;
+	height: 85px;
+	top: 160px;
+	left: 261px;
+	z-index: 2;
+}
+
+.yb-beyond-tech-slides > div:nth-child(1) > span::after {
+	top: 81px;
+	left: 295px;
+	background: #f5f5f7;
+	border-radius: 0 0 0 8px;
+	border-left: 1px solid var(--grayscale-gray-5);
+	border-bottom: 1px solid var(--grayscale-gray-5);
+}
+
+.yb-beyond-tech-slides > div:nth-child(2) > span::before {
+	top: 60px;
+	left: -50px;
+}
+
+.yb-beyond-tech-slides > div:nth-child(2) > span::after {
+	top: 67px;
+	left: -52px;
+	background: #f5f5f7;
+	border-radius: 0 8px 0 0;
+	border-top: 1px solid var(--grayscale-gray-5);
+	border-right: 1px solid var(--grayscale-gray-5);
+}
+
+.yb-beyond-tech-slides > div:nth-child(3) > span::before {
+	top: -90px;
+	left: 260px;
+}
+
+.yb-beyond-tech-slides > div:nth-child(3) > span::after {
+	top: -97px;
+	left: 255px;
+	background: #f5f5f7;
+	border-radius: 0 0 8px 0;
+	border-bottom: 1px solid var(--grayscale-gray-5);
+	border-right: 1px solid var(--grayscale-gray-5);
+}
+
+.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::before {
+	top: -5px;
+	left: 285px;
+	width: 20px;
+}
+
+.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::after {
+	top: 66px;
+	left: 295px;
+	background: #f5f5f7;
+	border-radius: 8px 0 0;
+	border-top: 1px solid var(--grayscale-gray-5);
+	border-left: 1px solid var(--grayscale-gray-5);
+}
+
+.yb-beyond-tech-slides > div:nth-child(2):hover + div > div::before {
+	opacity: 1;
+}
+
+.yb-beyond-tech-nav {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	gap: 12px;
+}
+
+.yb-beyond-tech-nav i {
+	width: 100px;
+	height: 2px;
+	background: rgba(215, 213, 222, 1);
+	position: relative;
+	transition: all 300ms ease;
+	cursor: pointer;
+}
+
+.yb-beyond-tech-nav i::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+}
+
+.yb-beyond-tech-nav i::before {
+	content: "";
+	height: 100%;
+	width: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: var(--primary-orange);
+}
+
+.yb-beyond-tech-slider:hover + .yb-beyond-tech-nav i.active::before,
+.yb-beyond-tech-nav i:hover::before {
+	animation: beyond-tech-nav 500ms linear forwards;
+}
+
+.yb-beyond-tech-slider:not(:hover) + .yb-beyond-tech-nav i.active::before {
+	animation: beyond-tech-nav 3.9s linear forwards;
+}
+
+@media (min-width: 768px) {
+
+	.yb-beyond-tech-slides > div > div {
+		height: 100%;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.yb-beyond-tech-cta {
+		margin-top: auto;
+	}
+}
+
+@keyframes beyond-tech-nav {
+
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.yb-beyond-tech-details span {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		transition: all 300ms ease;
+	}
+}
+
+@media (max-width: 1239px) {
+
+	.yugabyte-beyond-tech-section {
+		padding: 80px 0 64px;
+	}
+
+	.site-main- .yugabyte-beyond-tech-section h2 {
+		margin-bottom: 40px;
+		padding-bottom: 32px;
+		border-bottom: 1px solid var(--grayscale-gray-3);
+	}
+
+	.site-main- .yugabyte-beyond-tech-section p {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.yugabyte-beyond-tech-section .section-copy {
+		width: 820px;
+		max-width: 100%;
+	}
+
+	.yugabyte-beyond-tech-section .section-right {
+		width: 680px;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.yugabyte-beyond-tech-section .section-inner {
+		flex-flow: column;
+		align-items: center;
+		gap: 36px;
+	}
+
+	.yugabyte-beyond-tech-section .section-left {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.yugabyte-beyond-tech-section {
+		padding: 72px 0 56px;
+	}
+
+	.site-main- .yugabyte-beyond-tech-section p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.yb-beyond-tech-slides > div {
+		height: 208px;
+	}
+
+	.yb-beyond-tech-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.yb-beyond-tech-details {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.yugabyte-beyond-tech-section .section-right {
+		padding: 20px 10px 6px;
+	}
+
+	.yb-beyond-tech-slides {
+		width: 100%;
+		margin: 12px auto 25px;
+	}
+
+	.yb-beyond-tech-slides > div:nth-child(3),
+	.yb-beyond-tech-slides > div {
+		margin: 0 auto;
+	}
+
+	.yb-beyond-tech-slides > div:nth-child(2) {
+		margin: 37px auto;
+		float: none;
+	}
+
+	.yb-beyond-tech-slides > div:nth-child(1) > span::before,
+	.yb-beyond-tech-slides > div:nth-child(2) > span::before {
+		top: calc(100% + 13px);
+		height: 13px;
+		background: url(/wp-content/themes/yugabyte/assets/images/rebrand/card-sep-mob.png) no-repeat center;
+		width: 100%;
+		left: 0;
+	}
+
+	.yb-beyond-tech-nav,
+	.yb-beyond-tech-slides > div:nth-child(1) > span::after,
+	.yb-beyond-tech-slides > div:nth-child(2) > span::after,
+	.yb-beyond-tech-slides > div:nth-child(3) > span::before,
+	.yb-beyond-tech-slides > div:nth-child(3) > span::after,
+	.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::before,
+	.yb-beyond-tech-slides > div:nth-child(3) .yb-beyond-tech-title::after,
+	.yb-beyond-tech-slides > div:nth-child(2) + div > div::before {
+		display: none;
+	}
+
+	.yugabyte-beyond-tech-section .yb--link-black {
+		position: static;
+	}
+
+	.yugabyte-beyond-tech-section .yb--link-black::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+	}
+
+	.yb-beyond-tech-slides > div .yb-beyond-tech-cta a:hover::after {
+		background-size: 0, 0, auto;
+	}
+}

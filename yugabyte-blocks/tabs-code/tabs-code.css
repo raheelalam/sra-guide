@@ -1,0 +1,444 @@
+@font-face {
+  font-family  :roboto-mono;
+  font-style   :normal;
+  font-weight  :400;
+  font-display :swap;
+  src          :url(/wp-content/themes/yugabyte/assets/font/RobotoMono-Regular.woff2) format("woff2");
+}
+.yugabyte-tabs-code-section {
+  padding-bottom :120px;
+}
+.yugabyte-tabs-code-section .section-head {
+  border-bottom  :1px solid var(--grayscale-gray-11);
+  margin-bottom  :56px;
+  padding-bottom :40px;
+}
+.yugabyte-tabs-code-section .section-head h2 {
+  width     :824px;
+  max-width :100%;
+}
+.tabs-container {
+  display   :flex;
+  gap       :40px 74px;
+  flex-flow :row;
+}
+.yugabyte-tabs-code-section .sub-header {
+  font-size     :24px;
+  font-style    :normal;
+  font-weight   :400;
+  line-height   :32px;
+  width         :660px;
+  max-width     :100%;
+  font-family   :Roobert;
+  margin-bottom :56px;
+}
+
+.vertical-tabs .dropdown-list {
+  display   :flex;
+  flex-flow :column;
+  min-width :250px;
+  gap       :24px;
+}
+.vertical-tabs span {
+  font-family  :Roobert;
+  font-size    :16px;
+  font-style   :normal;
+  font-weight  :600;
+  line-height  :24px;
+  padding-left :20px;
+  position     :relative;
+  color        :var(--grayscale-gray-6);
+}
+.vertical-tabs span:not(.active) {
+  cursor :pointer;
+}
+.vertical-tabs span:hover,
+.vertical-tabs span.active {
+  color :#fff;
+}
+.vertical-tabs span.active::before {
+  content       :"";
+  position      :absolute;
+  width         :8px;
+  height        :8px;
+  left          :2px;
+  background    :var(--primary-purple);
+  border-radius :2px;
+  top           :8px;
+}
+.vt-content {
+  width    :calc(100% - (250px + 74px));
+  overflow :hidden;
+}
+.vt-data:not(.active) {
+  display :none;
+}
+.vt-data-heads {
+  display         :flex;
+  width           :100%;
+  background      :var(--grayscale-gray-11);
+  border-radius   :4px 4px 0 0;
+  height          :48px;
+  padding-left    :70px;
+  position        :relative;
+  overflow-x      :scroll;
+  scrollbar-width :none;
+}
+.vt-data-heads::-webkit-scrollbar {
+  display :none;
+}
+.vt-data-heads::before {
+  content    :"";
+  position   :absolute;
+  width      :24px;
+  height     :24px;
+  background :url(/wp-content/themes/yugabyte/assets/images/rebrand/yugabyte-logomark-orange.svg) no-repeat top left / 100%;
+  top        :12px;
+  left       :20px;
+  filter     :grayscale(1);
+}
+.ht-data-head {
+  display      :flex;
+  align-items  :center;
+  gap          :6px;
+  padding      :0 28px 0 16px;
+  height       :100%;
+  border-right :1px solid transparent;
+}
+.ht-data-head > img {
+  max-width :20px;
+}
+.ht-data-head:not(.active) {
+  border-right-color :var(--grayscale-gray-10);
+  cursor             :pointer;
+}
+.ht-data-head:first-child {
+  border-left :1px solid transparent;
+}
+.ht-data-head:not(.active):first-child {
+  border-left-color :var(--grayscale-gray-10);
+}
+.ht-data-head.active {
+  background :var(--grayscale-gray-12);
+}
+.ht-data-head span {
+  font-family :Roobert;
+  font-size   :16px;
+  font-weight :600;
+  line-height :24px;
+  color       :var(--grayscale-gray-6);
+  white-space :nowrap;
+}
+.ht-data-head:hover span,
+.ht-data-head.active span {
+  color :#fff;
+}
+.ht-data-contents {
+  background    :var(--grayscale-gray-12);
+  padding       :32px 0 0 0;
+  border-radius :0 0 14px 4px;
+  font-family   :roboto-mono;
+  font-size     :16px;
+  font-weight   :400;
+  line-height   :22px;
+  overflow      :hidden;
+}
+.ht-data-contents * {
+  font-family :inherit;
+}
+.ht-data-content:not(.active) {
+  display :none;
+}
+.ht-data-content {
+  padding    :0 32px 32px;
+  overflow   :auto;
+  max-height :470px;
+}
+@-moz-document url-prefix() {
+  .ht-data-content {
+	scrollbar-width :thin;
+  }
+}
+.ht-data-content::-webkit-scrollbar-track {
+  background :transparent;
+}
+.ht-data-content::-webkit-scrollbar {
+  width  :4px;
+  height :4px;
+}
+.ht-data-content::-webkit-scrollbar-thumb {
+  background    :var(--grayscale-gray-10);
+  border-radius :4px;
+}
+.ht-data-content::-webkit-scrollbar-thumb:hover {
+  background :var(--grayscale-gray-8);
+}
+.codes-wrap > [class*="enlighter-"] {
+  max-width :calc(100% - 20px);
+}
+.codes-wrap > [class*="enlighter-"],
+.codes-wrap [class*="enlighter-"] div.enlighter > div {
+  background-color :transparent !important;
+}
+.codes-wrap [class*="enlighter-"] div.enlighter > div {
+  padding-left :0;
+}
+.codes-wrap .enlighter span{
+  font-size:16px;
+}
+.codes-wrap .enlighter-linenumbers[class*="enlighter-"] div.enlighter > div::before {
+  content       :counter(enlighter, decimal);
+  width         :15px;
+  min-width     :15px;
+  text-align    :left;
+  color         :var(--grayscale-white-40);
+  font-size     :16px;
+  font-weight   :400;
+  line-height   :22px;
+  padding-right :10px;
+  background    :transparent;
+  /*text-align    :center;*/
+  /*padding-left  :10px;*/
+}
+.enlighter-default {
+  border :0;
+}
+
+.codes-wrap div.enlighter > div > div {
+  padding-left :0;
+}
+.codes-wrap div.enlighter > div > div::before {
+  content :"";
+}
+.codes-wrap .enlighter-t-dracula .enlighter-c0 {
+  color :var(--grayscale-gray-6);
+}
+.codes-wrap .enlighter-t-dracula .enlighter-k7 {
+  color :#50d976;
+}
+.codes-wrap > .enlighter-linenumbers:not(:last-child) {
+  margin :20px -3px 48px;
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar {
+  display :block;
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar .enlighter-btn:not(.enlighter-btn-copy) {
+  display :none;
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar .enlighter-btn.enlighter-btn-copy {
+  margin     :0 -40px 0 0;
+  width      :32px;
+  height     :32px;
+  background :transparent url(/wp-content/themes/yugabyte/assets/images/rebrand/icon-copy.svg);
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar .enlighter-btn.enlighter-btn-copy .enlighter-tooltip {
+  margin :0 0 10px -40px;
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar .enlighter-btn.enlighter-btn-copy .enlighter-tooltip::after {
+  margin-left :20px;
+}
+.codes-wrap > [class*="enlighter-"] > .enlighter-toolbar .enlighter-btn.enlighter-btn-copy::after {
+  content :"";
+}
+.yb-sec .codes-wrap p {
+  font-size   :16px;
+  font-style  :normal;
+  font-weight :400;
+  line-height :22px;
+  font-family :roboto-mono;
+  margin      :0;
+  color       :var(--grayscale-gray-6);
+}
+.yb-sec .codes-wrap p .enlighter-t-enlighter.enlighter-v-inline {
+  background    :transparent;
+  border        :1px solid var(--grayscale-gray-10);
+  border-radius :2px;
+  padding       :0;
+}
+.yb-sec .codes-wrap p .enlighter-t-enlighter.enlighter-v-inline .enlighter {
+  padding     :0 5px 3px;
+  margin      :0;
+  line-height :normal;
+}
+.yb-sec .codes-wrap p .enlighter-t-enlighter.enlighter-v-inline * {
+  color     :var(--grayscale-gray-6);
+  font-size :16px;
+}
+.yugabyte-tabs-code-section .cta {
+  margin :66px 0 0;
+}
+.yugabyte-tabs-code-section .cta .yb--link-white::after {
+  background-size :100%, 0, 0;
+  width           :32px;
+  height          :32px;
+}
+.yugabyte-tabs-code-section .cta .yb--link-white:hover::after {
+  background-size :0, 100%, 0;
+}
+@media (min-width :992px) {
+  .yugabyte-tabs-code-section .section-head {
+	padding-top :120px;
+  }
+  .vertical-tabs .active-tab {
+    display: none;
+  }
+}
+@media (max-width :991px) {
+  .yugabyte-tabs-code-section {
+	overflow :hidden;
+	padding  :0 0 80px;
+  }
+  .yugabyte-tabs-code-section .section-head {
+	margin-bottom  :48px;
+	padding-bottom :32px;
+  }
+  .tabbed-container {
+	flex-flow :column;
+	gap       :30px; /* 10px given to menu scroll */
+  }
+  .vertical-tabs {
+	display     :block;
+	overflow-x  :auto;
+	white-space :nowrap;
+	padding     :0 40px 10px 0;
+	width       :calc(100% + 40px);
+  }
+  .vertical-tabs span {
+	padding       :8px 16px;
+	border-radius :48px;
+	display       :inline-block;
+  }
+  .vertical-tabs span.active {
+	background :var(--primary-purple);
+  }
+  .vertical-tabs span.active::before {
+	display :none;
+  }
+  .vt-content {
+	width :100%;
+  }
+  .vt-data-heads {
+	padding-left :65px;
+  }
+  .ht-data-head span {
+	white-space   :nowrap;
+	overflow      :hidden;
+	/*text-overflow :ellipsis;*/
+	/*max-width     :50px;*/
+  }
+  .ht-data-content {
+	padding    :0 28px 28px;
+	max-height :calc(100vh - 250px); /* approx to look better on tablet */
+  }
+  .yugabyte-tabs-code-section .cta {
+	margin     :36px 0 0;
+	text-align :left;
+  }
+  .tabs-container{
+    flex-flow:column;
+  }
+  .vertical-tabs {
+    width: 100%;
+    padding: 0;
+  }
+  .vertical-tabs:not(.open)  .dropdown-list{
+    height :0;
+    opacity :0;
+    visibility:hidden;
+  }
+  .vertical-tabs .active-tab .dropdown-list {
+    visibility:visible;
+    opacity :1;
+    transition: height 300ms linear;
+  }
+  
+  .vertical-tabs .active-tab:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--grayscale-black);
+    border-right: 2px solid var(--grayscale-black);
+    transform: rotate(135deg);
+    top: 22px;
+    right: 20px;
+  }
+  .vertical-tabs .active-tab {
+    height: 56px;
+    background: var(--grayscale-gray-1);
+    padding: 16px 20px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    min-width: 190px;
+    color: var(--grayscale-black);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  .vertical-tabs .dropdown-list {
+    display: none;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 2;
+    padding: 10px 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 5px var(--grayscale-gray-4);
+    border-radius: 4px;
+    overflow: hidden;
+    margin :5px 0 0 0;
+    gap:0;
+  }
+  
+  .vertical-tabs.open .dropdown-list {
+    display: flex;
+  }
+  .vertical-tabs .dropdown-list span:not(:last-child) {
+    border-bottom: 1px solid var(--grayscale-gray-3);
+  }
+  .vertical-tabs .dropdown-list span:not(.active) {
+    color: var(--grayscale-black);
+    
+  }
+  .vertical-tabs .dropdown-list span {
+    display: block;
+    font-family: inter;
+    padding: 5px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 300ms  ease;
+    border-radius:0;
+  }
+}
+@media (max-width :767px) {
+  .yugabyte-tabs-code-section .section-head {
+	margin-bottom  :36px;
+	padding-bottom :24px;
+  }
+  .tabbed-container {
+	gap :22px;
+  }
+  .ht-data-head {
+	padding :0 14px 0;
+  }
+  .ht-data-content {
+	padding :0 24px 24px;
+  }
+  
+  
+  
+}
+.enlighter-light, .enlighter-default {
+  background-color :#2e2e2e !important;
+  color            :#f8f8f8 !important;
+}
+.enlighter-light .el-lines, .enlighter-default .el-lines {
+  background-color :inherit;
+}
+.enlighter-light .el-logical-line, .enlighter-default .el-logical-line {
+  border-color :#444 !important;
+}

@@ -1,0 +1,5 @@
+.yb-book-slide-point b,
+.yb-book-slide-point strong,
+[lang="ja"] .yb-book-slide-point.checked {
+	font-weight: 700;
+}

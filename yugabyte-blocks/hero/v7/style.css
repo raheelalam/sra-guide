@@ -1,0 +1,259 @@
+.yb-hero-section {
+	padding: 96px 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.yb-hero-section img {
+	width: auto;
+	height: auto;
+	max-height: 52px;
+}
+
+.yb-hero-section img[src*="paramount"] {
+	max-height: 72px;
+}
+
+.yb-hero-section img[src*="Fiserv-Logo"],
+.yb-hero-section img[src*="logo-HRT"] {
+	width: 60px;
+}
+
+.yb-hero-section .container {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-flow: row wrap;
+}
+
+.hero-content {
+	width: calc(100% - 536px - 14px);
+}
+
+.hero-image {
+	width: 536px;
+	max-width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.hero-image img {
+	animation: coloring 6s linear infinite;
+}
+
+@keyframes coloring {
+
+	25%,
+	75% {
+		filter: grayscale(1) saturate(0);
+	}
+
+	0%,
+	100% {
+		filter: grayscale(0) saturate(1);
+	}
+}
+
+.hero-image div:nth-child(1) img {
+	animation-delay: 1s;
+}
+
+.hero-image div:nth-child(9) img {
+	animation-delay: 1.5s;
+}
+
+.hero-image div:nth-child(2) img {
+	animation-delay: 2s;
+}
+
+.hero-image div:nth-child(8) img {
+	animation-delay: 2.5s;
+}
+
+.hero-image div:nth-child(3) img {
+	animation-delay: 4s;
+}
+
+.hero-image div:nth-child(5) img {
+	animation-delay: 5s;
+}
+
+.hero-image div:nth-child(7) img {
+	animation-delay: 4.5s;
+}
+
+.hero-image div:nth-child(4) img {
+	animation-delay: 5.5s;
+}
+
+.hero-image div:nth-child(6) img {
+	animation-delay: 6s;
+}
+
+.hero-image > div {
+	width: 165px;
+	height: 165px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	border: 1px solid var(--grayscale-gray-4);
+	padding: 25px;
+}
+
+.hero-image > div:nth-child(1),
+.hero-image > div:nth-child(3),
+.hero-image > div:nth-child(7),
+.hero-image > div:nth-child(9) {
+	width: 126px;
+	height: 126px;
+	align-self: flex-end;
+	padding: 20px;
+}
+
+.hero-image > div:nth-child(7),
+.hero-image > div:nth-child(9) {
+	align-self: flex-start;
+}
+
+.yb-hero-section h1 {
+	font-family: Roobert;
+	font-size: 72px;
+	line-height: 72px;
+	letter-spacing: -1.44px;
+	font-weight: 400;
+	margin: 0 0 32px;
+}
+
+.yb-hero-section .hero-subs {
+	width: 645px;
+	max-width: 100%;
+}
+
+.yb-hero-section .hero-subs,
+.yb-hero-section .hero-subs p {
+	font-size: 20px;
+	line-height: 28px;
+	margin: 0;
+}
+
+
+@media (max-width: 991px) {
+
+	.yb-hero-section {
+		padding: 68px 0 58px;
+	}
+
+	.yb-hero-section .container {
+		padding-right: 0;
+		gap: 18px;
+	}
+
+	.yb-hero-section h1 {
+		font-size: 56px;
+		line-height: 62px;
+		letter-spacing: -1.12px;
+		margin: 0 0 20px;
+	}
+
+	.hero-content {
+		width: calc(100% - 19px - 385px);
+	}
+
+	.hero-image {
+		width: 385px;
+		gap: 12px;
+	}
+
+	.hero-image > div {
+		width: 120px;
+		height: 120px;
+		padding: 15px;
+	}
+
+	.hero-image > div:nth-child(1),
+	.hero-image > div:nth-child(3),
+	.hero-image > div:nth-child(7),
+	.hero-image > div:nth-child(9) {
+		width: 91px;
+		height: 91px;
+		padding: 12px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.yb-hero-section {
+		margin-top: 70px;
+		padding: 12px 0 80px;
+	}
+
+	.yb-hero-section .container {
+		padding: 0;
+		gap: 32px;
+		flex-flow: column;
+	}
+
+	.hero-content {
+		width: 100%;
+		padding: 0 16px;
+	}
+
+	.yb-hero-section h1 {
+		font-size: 44px;
+		line-height: 46px;
+		letter-spacing: -0.88px;
+	}
+
+	.yb-hero-section .hero-subs {
+		font-size: 16px;
+		line-height: 22px;
+		margin: 16px 0 0;
+	}
+
+	.hero-image > div {
+		width: 117px;
+		height: 117px;
+	}
+
+}
+
+/*
+@media (max-width: 479px) {
+
+	.hero-image {
+		transition: all 500ms ease;
+	}
+
+	body:not(.js-lazyloaded-new) .hero-image {
+		margin-top: 300px;
+	}
+}
+*/
+
+@media (max-width: 374px) {
+
+	.hero-image {
+		width: 100%;
+		gap: 8px;
+	}
+
+	.hero-image > div {
+		width: calc((100% / 3) - 8px);
+		height: auto;
+		aspect-ratio: 1;
+		padding: 8px;
+	}
+
+	.hero-image > div:nth-child(1),
+	.hero-image > div:nth-child(3),
+	.hero-image > div:nth-child(7),
+	.hero-image > div:nth-child(9) {
+		width: 80px;
+		height: 80px;
+		padding: 8px;
+	}
+}
