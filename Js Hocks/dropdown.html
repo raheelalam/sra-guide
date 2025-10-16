@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown js for open close</title>
+</head>
+<body>
+<div class="partners-menu">
+    <div class="catalog-menu-title">CATEGORY</div>
+    <div class="partners-mob-menu">Monitoring and Observability</div>
+    <div class="partners-mob-container">
+        <div class="partners-mob-menu-close"></div>
+        <span data-name="all" class="">All</span>
+        <span data-name="featured-ecosystem">Featured Ecosystem</span><span data-name="yugabytedb-voyager-migration-suite">YugabyteDB Voyager Migration Suite</span><span data-name="schema-migration">Schema Migration</span><span data-name="data-migration-utilities-other">Data Migration Utilities: Other</span><span data-name="streaming">Streaming</span><span data-name="cloud-and-messaging">Cloud and Messaging</span><span data-name="analytics-self-service">Analytics: Self-Service</span><span data-name="analytics-advanced">Analytics: Advanced</span><span data-name="deployment-flexibility">Deployment Flexibility</span><span data-name="container-and-orchestration">Container and Orchestration</span><span data-name="infrastructure-as-code" class="">Infrastructure as Code</span><span data-name="yugabytedb-smart-drivers">YugabyteDB Smart Drivers</span><span data-name="multi-language-support">Multi-Language Support</span><span data-name="ycql-cassandra-compatible-drivers">YCQL (Cassandra-Compatible) Drivers</span><span data-name="java-ecosystem">Java Ecosystem</span><span data-name="web-frameworks">Web Frameworks</span><span data-name="development-and-low-code">Development and Low-Code</span><span data-name="popular-database-clients">Popular Database Clients</span><span data-name="monitoring-and-observability" class="active">Monitoring and Observability</span><span data-name="metadata-management">Metadata Management</span><span data-name="ai-and-vector-search">AI and Vector Search</span><span data-name="ai-ready-data-processing">AI-Ready Data Processing</span><span data-name="identity-and-access-management">Identity and Access Management</span><span data-name="enterprise-security-features">Enterprise Security Features</span><span data-name="graph-databases-and-time-series">Graph Databases and Time Series</span><span data-name="business-process-management">Business Process Management</span><span data-name="hardware-and-data-management-platforms">Hardware and Data Management Platforms</span><span data-name="container-and-cloud-native">Container and Cloud Native</span><span data-name="postgresql-ecosystem">PostgreSQL Ecosystem</span>                </div>
+</div>
+</body>
+<script>
+  document.addEventListener('click', (e) => {
+    const toggle = document.querySelector('.partners-mob-menu');
+    if (toggle.contains(e.target)) {
+      toggle.classList.toggle('open');
+    } else {
+      console.log('Console--222');
+      toggle.classList.remove('open');
+    }
+
+  });
+
+</script>
+</html>
