@@ -1,0 +1,45 @@
+<script>
+
+  setTimeout(function () {
+
+    // Create button
+    const btn = document.createElement("button");
+
+    btn.id = "copy-btn";
+    btn.textContent = "Copy PageSpeed Scores";
+    btn.style.position = "fixed";
+    btn.style.top = "120px";
+    btn.style.right = "20px";
+    btn.style.padding = "10px 15px";
+    btn.style.zIndex = "999999";
+    btn.style.background = "#000";
+    btn.style.color = "#fff";
+    btn.style.border = "none";
+    btn.style.borderRadius = "6px";
+    btn.style.cursor = "pointer";
+    // Add to body
+    document.body.appendChild(btn);
+
+    // On click copy ALL scores
+    btn.addEventListener("click", function () {
+
+      // Get all metrics (change IDs as needed)
+      const performance    = document.querySelector(".lh-scores-header a:nth-child(1) .lh-gauge__percentage")?.textContent.trim() || "N/A";
+      const accessibility  = document.querySelector(".lh-scores-header a:nth-child(2) .lh-gauge__percentage")?.textContent.trim() || "N/A";
+      const best           = document.querySelector(".lh-scores-header a:nth-child(3)  .lh-gauge__percentage")?.textContent.trim() || "N/A";
+      const seo            = document.querySelector(".lh-scores-header a:nth-child(4)  .lh-gauge__percentage")?.textContent.trim() || "N/A";
+      const pageUrl        = window.location.href;
+
+      const sheetLink = `=HYPERLINK("${pageUrl}", "Page Link")`
+      const textToCopy =
+        `${performance} \t ${accessibility} \t ${best} \t ${seo} \t ${sheetLink}`;
+
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => console.log("All scores copied!"))
+    .catch(err => console.error("Copy failed:", err));
+    });
+
+  }, 1000); // Show button after 3 seconds
+
+</script>
+
