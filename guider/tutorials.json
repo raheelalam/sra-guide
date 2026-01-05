@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "language": "JavaScript",
+    "title": "Functions",
+    "lectures": [
+      {
+        "Name": "anaother Topics",
+        "Topics": [
+          {
+            "id": 1,
+            "title": "SubTopic Topics",
+            "description": "Allows named parameters to be initialized with default values if no value or undefined is passed.",
+            "codeExample": "function multiply(a, b = 1) {\n  return a * b;\n}"
+          }
+        ]
+      },
+      {
+        "Name": "Fucntion",
+        "Topics": [
+          {
+            "id": 1,
+            "title": "Default Parameters",
+            "description": "Allows named parameters to be initialized with default values if no value or undefined is passed.",
+            "codeExample": "function multiply(a, b = 1) {\n  return a * b;\n}"
+          },
+          {
+            "id": 2,
+            "title": "Arrow Functions",
+            "description": "A compact alternative to a traditional function expression.",
+            "codeExample": "const greet = () => console.log('Hi');"
+          },
+          {
+            "id": 3,
+            "title": "Function Declaration",
+            "description": "The standard way of defining a function using the function keyword.",
+            "subtopics": [
+              {
+                "id": 31,
+                "title": "Standard Declaration",
+                "codeExample": "function sum(a, b) {\n  return a + b;\n}"
+              },
+              {
+                "id": 32,
+                "title": "Hoisted Declaration",
+                "description": "Declarations are moved to the top of their scope before code execution.",
+                "codeExample": "sayHi();\nfunction sayHi() {\n  console.log('Hi!');\n}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "language": "PHP",
+    "title": "Loops",
+    "topics": [
+      {
+        "id": 1,
+        "title": "For Loop Example",
+        "codeExample": "<?php for($i=0;$i<5;$i++) { echo $i; } ?>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Manager</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #f4f7f6; }
+        .container { max-width: 900px; margin: auto; }
+
+        /* Form Styling */
+        .form-container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        input, textarea, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background: #28a745; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 1rem; }
+        button:hover { background: #218838; }
+
+        /* Display Styling */
+        .lang-card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 6px solid #f7df1e; }
+        .lecture-block { margin-top: 15px; border: 1px solid #eee; padding: 10px; border-radius: 5px; background: #fafafa; }
+        .lecture-header { font-weight: bold; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; }
+        .topic-box { margin-left: 15px; border-left: 3px solid #007bff; padding: 5px 15px; margin-top: 10px; background: #fff; }
+        .sub { margin-left: 30px; border-left-style: dashed; border-left-color: #ccc; }
+        pre { background: #272822; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h3>Add New Lecture or Topic</h3>
+        <form id="tutorialForm">
+            <div class="grid">
+                <div>
+                    <label>1. Select Language</label>
+                    <select id="langSelect" onchange="updateLectureDropdown()"></select>
+                </div>
+                <div>
+                    <label>2. Add to Lecture (Optional)</label>
+                    <select id="lectureSelect">
+                        <option value="NEW_LECTURE">-- Create New Lecture --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="newLectureInputGroup" class="form-group" style="margin-bottom: 15px;">
+                <label>New Lecture Name</label>
+                <input type="text" id="newLectureName" placeholder="e.g. Async Programming">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Topic Title</label>
+                <input type="text" id="topicTitle" required placeholder="e.g. Promises">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Description</label>
+                <input type="text" id="description" placeholder="Brief explanation">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Code Example</label>
+                <textarea id="codeExample" rows="3" placeholder="Paste code here..."></textarea>
+            </div>
+
+            <button type="submit">Save Content</button>
+        </form>
+    </div>
+
+    <div id="displayArea"></div>
+</div>
+
+<script>
+  let dbData = [];
+
+  // 1. Fetch and Render
+  async function loadData() {
+    const res = await fetch('http://localhost:3000/tutorials');
+    dbData = await res.json();
+
+    // Setup Language Dropdown
+    const langSelect = document.getElementById('langSelect');
+    langSelect.innerHTML = dbData.map(l => `<option value="${l.id}">${l.language}</option>`).join('');
+
+    updateLectureDropdown();
+    renderDisplay();
+  }
+
+  // 2. Dynamic Form Logic
+  function updateLectureDropdown() {
+    const langId = document.getElementById('langSelect').value;
+    const lectureSelect = document.getElementById('lectureSelect');
+    const selectedLang = dbData.find(l => l.id == langId);
+
+    let options = '<option value="NEW_LECTURE">-- Create New Lecture --</option>';
+    if (selectedLang && selectedLang.lectures) {
+      selectedLang.lectures.forEach((lec, index) => {
+        options += `<option value="${index}">${lec.Name}</option>`;
+      });
+    }
+    lectureSelect.innerHTML = options;
+    toggleLectureInput();
+  }
+
+  function toggleLectureInput() {
+    const isNew = document.getElementById('lectureSelect').value === "NEW_LECTURE";
+    document.getElementById('newLectureInputGroup').style.display = isNew ? 'block' : 'none';
+  }
+  document.getElementById('lectureSelect').addEventListener('change', toggleLectureInput);
+
+  // 3. Recursive Display
+  function renderTopics(topics, container, level = 0) {
+    topics.forEach(t => {
+      const div = document.createElement('div');
+      div.className = level === 0 ? 'topic-box' : 'topic-box sub';
+      div.innerHTML = `<strong>${t.title}</strong>${t.description ? `<p>${t.description}</p>` : ''}`;
+      if(t.codeExample) div.innerHTML += `<pre><code>${t.codeExample}</code></pre>`;
+      container.appendChild(div);
+      if(t.subtopics) renderTopics(t.subtopics, div, level + 1);
+    });
+  }
+
+  function renderDisplay() {
+    const area = document.getElementById('displayArea');
+    area.innerHTML = '';
+    dbData.forEach(lang => {
+      const card = document.createElement('div');
+      card.className = 'lang-card';
+      card.innerHTML = `<h2>${lang.language}</h2>`;
+
+      if(lang.lectures) {
+        lang.lectures.forEach(lec => {
+          const lecDiv = document.createElement('div');
+          lecDiv.className = 'lecture-block';
+          lecDiv.innerHTML = `<div class="lecture-header">LECTURE: ${lec.Name}</div>`;
+          renderTopics(lec.Topics || [], lecDiv);
+          card.appendChild(lecDiv);
+        });
+      }
+      area.appendChild(card);
+    });
+  }
+
+  // 4. Submit Logic
+  document.getElementById('tutorialForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const langId = document.getElementById('langSelect').value;
+    const lecIndex = document.getElementById('lectureSelect').value;
+
+    const newTopic = {
+      id: Date.now(),
+      title: document.getElementById('topicTitle').value,
+      description: document.getElementById('description').value,
+      codeExample: document.getElementById('codeExample').value
+    };
+
+    const langObj = dbData.find(l => l.id == langId);
+
+    if (lecIndex === "NEW_LECTURE") {
+      // Create a brand new lecture array entry
+      const newLecName = document.getElementById('newLectureName').value || "Untitled Lecture";
+      if(!langObj.lectures) langObj.lectures = [];
+      langObj.lectures.push({
+        Name: newLecName,
+        Topics: [newTopic]
+      });
+    } else {
+      // Add topic to existing lecture
+      langObj.lectures[lecIndex].Topics.push(newTopic);
+    }
+
+    // SAVE: This requires your backend to accept a PUT/POST of the full array
+    await fetch('http://localhost:3000/tutorials_update', {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(dbData)
+    });
+
+    this.reset();
+    loadData();
+  });
+
+  loadData();
+</script>
+</body>
+</html>
